@@ -1,0 +1,24 @@
+<html>
+   <meta charset="UTF-8">
+   <head>
+      <title>240 Forecast</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script>
+      var settings = {
+  "url": "https://api.openweathermap.org/data/2.5/weather?zip=32955&appid=100976423fcc7d1607b39cf2d57544cf&units=imperial",
+  "method": "GET",
+  "timeout": 0,
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  var content = response.main.temp;
+  $("#currentTemp").append(content);
+});
+      </script>
+   </head>
+   <body>
+      <h1>240 Forecast</h1>
+      Current Temperature: <span id="currentTemp"></span>
+   </body>
+</html>
