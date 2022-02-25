@@ -15,7 +15,10 @@ I want to do a personal project or set of projects that helps me get back up to 
 	4. Full exploration of all the error states, error codes and troubleshooting specifics for each
 	5. Explore available test data sets, make and document new sets with specific shapes to test specific Community functions
 	6. Document the differences between how Community API works and how Enterprise API works. Specify which API endpoints will work with either, which are different. Focus on common endpoints that behave differently.
-
+6. Document how to create Community API calls with:
+	1. Swagger
+	2. Postman
+	3. Stoplight
 ### Scoring
 Fun = 5 / 5
 Hard = 5 / 5
