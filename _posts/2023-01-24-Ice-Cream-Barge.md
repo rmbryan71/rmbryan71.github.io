@@ -1,3 +1,6 @@
+# Ice Cream Barge
+### (340-word microfiction)
+
 In World War Two, I served on a ship we called the USS Barrel. It was a concrete-hulled monstrosity that the Navy called a BRL (Barge, Refrigerated, Large). We had massive refrigerated rooms for meat and vegetables from back home, but our real claim to fame was that we could make 10 gallons of ice cream in seven minutes. It's misleading to say that without clarifying that we didn't make ice cream as our grandparents did, with cream and a lot of mixing. We used powder from the national dairy and just added water.
 
 It was easy duty. We never got shot at or captured. We had to work odd shifts, but nobody complained. I should say, nobody but PFC Earl Gravits complained. Gravits was a loud-mouth, and swore constantly. He took personal offense to being stationed on the USS Barrel, saying it was beneath his status. "Duty not befitting a fighting man like myself.", he repeated often.
