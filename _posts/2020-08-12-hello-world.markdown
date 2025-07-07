@@ -4,7 +4,5 @@ title:  "Hello, world"
 date:   2020-08-12 05:27:02 -0400
 ---
 
-I intend to put things I've written here. 
-More for myself than others.
-I'm still working on much of this, so it's apt to change.
+I intend to put thoughts here, more for myself than others.
 Feel free to look around if you like.
