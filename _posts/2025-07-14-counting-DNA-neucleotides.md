@@ -1,4 +1,3 @@
-# Counting DNA Nucleotides
 [This](https://rosalind.info/problems/dna/) problem asks:
 
 **Given**: A DNA string _s_ of length at most 1000 nt.
