@@ -1,3 +1,8 @@
+---
+layout: post
+title:  "Project Rosalind Launch"
+date:   2025-08-14
+---
 # Introduction
 [Project Rosalind](https://rosalind.info/about/) is a set of bioinformatics problems that I'm going to attempt to solve while documenting the process here.
 ![bioinformatics-problem-solving.png](/assets/bioinformatics-problem-solving.png)
