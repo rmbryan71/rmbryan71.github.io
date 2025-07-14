@@ -1,6 +1,6 @@
 # Introduction
 [Project Rosalind](https://rosalind.info/about/) is a set of bioinformatics problems that I'm going to attempt to solve while documenting the process here.
-![bioinformatics-problem-solving.png](../assets/bioinformatics-problem-solving.png)
+![bioinformatics-problem-solving.png](/assets/bioinformatics-problem-solving.png)
 *image from ChatGPT*
 # Ground Rules
 1. **AI Use**: I'm going to use AI to help me make images and code because coding is the least interesting part of this process for me. I'm _not_ going to use AI for problem solving or text writing, because those are the parts I want to get better at through practice.
