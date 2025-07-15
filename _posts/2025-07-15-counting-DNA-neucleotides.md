@@ -16,8 +16,6 @@ They're going to send me a string of text no longer than 1000 characters.
 They want me to count the A's, C's, G's and T's, then return those results.
 
 This is so easy, I would call it "[trivial](https://science.awjunaid.com/math/difference-between-trivial-vs-non-trivial-problem/)", except it does involve some file handling.
-![easy-trivial-simple.png](../assets/easy-trivial-simple.png)
-*image from ChatGPT*
 ## Mechanisms
 The way [Project Rosalind](https://rosalind.info/about/) works is that you click a big "Download Dataset" button and the website deposits a file in your downloads folder.
 This problem's abbreviation is "dna", so the download file will be called "rosalind_dna.txt"
@@ -42,7 +40,7 @@ Since the problem tells us the maximum number of letters in the test set is 1000
 If I wanted to shave off some milliseconds, I would set up four counters: A, C, G, and T. Then I would run through the list one time and increment the counter that matches the letter in the test set, but I don't care about the extra time, so my simple solution is fine for this purpose.
 
 ## Conclusion
-This is one of the easiest problem in the set.
+This is one of the easiest problems in the set.
 
 Things will get more interesting as we go along.
 
