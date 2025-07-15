@@ -19,14 +19,16 @@ Then you have 5 minutes to upload your answer.
 
 Since time is limited and we don't want to waste time looking for files or moving them around, we'll start our program by opening the specific file in the downloads folder.
 
-Then we just count.
+Then we just count all the 
 
 Python includes a [list count method](https://www.w3schools.com/python/ref_list_count.asp) that solves this problem for us.
 
 To be fancy, I'm using a little helper program (package) called pyperclip to drop the answer onto my clipboard so all I have to do is paste it in the answer box.
+## Inefficient solution
+
 
 ## Conclusion
-This is the easiest problem in the set, by far.
+This is one of the easiest problem in the set.
 
 Things will get more interesting as we go along.
 
