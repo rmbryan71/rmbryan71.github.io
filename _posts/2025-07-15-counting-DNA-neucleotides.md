@@ -16,7 +16,7 @@ They're going to send me a string of text no longer than 1000 characters.
 They want me to count the A's, C's, G's and T's, then return those results.
 
 This is so easy, I would call it "[trivial](https://science.awjunaid.com/math/difference-between-trivial-vs-non-trivial-problem/)", except it does involve some file handling.
-![easy-trivial-simple.png](../assets/easy-trivial-simple.png)
+![easy-trivial-simple.png](../assets/easy-trivial-simple.png){: width="250" }
 *image from ChatGPT*
 ## Mechanisms
 The way [Project Rosalind](https://rosalind.info/about/) works is that you click a big "Download Dataset" button and the website deposits a file in your downloads folder.
