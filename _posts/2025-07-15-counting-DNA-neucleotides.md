@@ -6,17 +6,18 @@ date:   2025-07-15
 
 [This](https://rosalind.info/problems/dna/) problem asks:
 
-**Given**: A DNA string _s_ of length at most 1000 nt.
+> **Given**: A DNA string _s_ of length at most 1000 nt.
 
-**Return**: Four integers (separated by spaces) counting the respective number of times that the symbols 'A', 'C', 'G', and 'T' occur in _s_.
+> **Return**: Four integers (separated by spaces) counting the respective number of times that the symbols 'A', 'C', 'G', and 'T' occur in _s_.
 
 ## First impression
 They're going to send me a string of text no longer than 1000 characters.
 
 They want me to count the A's, C's, G's and T's, then return those results.
 
-This is so easy, I would call it "[trivial](https://science.awjunaid.com/math/difference-between-trivial-vs-non-trivial-problem/)", except it does involve some file handling. 
-
+This is so easy, I would call it "[trivial](https://science.awjunaid.com/math/difference-between-trivial-vs-non-trivial-problem/)", except it does involve some file handling.
+![easy-trivial-simple.png](../assets/easy-trivial-simple.png)
+*image from ChatGPT*
 ## Mechanisms
 The way [Project Rosalind](https://rosalind.info/about/) works is that you click a big "Download Dataset" button and the website deposits a file in your downloads folder.
 This problem's abbreviation is "dna", so the download file will be called "rosalind_dna.txt"
@@ -24,6 +25,7 @@ This problem's abbreviation is "dna", so the download file will be called "rosal
 Then you have 5 minutes to upload your answer. 
 
 Since time is limited and we don't want to waste time looking for files or moving them around, we'll start our program by opening the specific file in the downloads folder.
+For me, that's 'file_path = "/Users/robertbryan/Downloads/rosalind_dna.txt"'
 
 ## Solution steps
 Python includes a [list count method](https://www.w3schools.com/python/ref_list_count.asp) that solves this problem for us.
