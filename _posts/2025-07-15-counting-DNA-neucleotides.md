@@ -13,7 +13,7 @@ date:   2025-07-15
 ## First impression
 They're going to send me a string of text no longer than 1000 characters.
 
-They want me to count the A's, C's, G's and T's, then return those results.
+They want me to count the A's, C's, G's, and T's, then return those results.
 
 This is so easy, I would call it "[trivial](https://science.awjunaid.com/math/difference-between-trivial-vs-non-trivial-problem/)", except it does involve some file handling.
 ## Mechanisms
@@ -28,11 +28,20 @@ For me, that's 'file_path = "/Users/robertbryan/Downloads/rosalind_dna.txt"'
 ## Solution steps
 Python includes a [list count method](https://www.w3schools.com/python/ref_list_count.asp) that solves this problem for us.
 
-Then we just count all the A's, C's, G's and T's.
+Then we just count all the A's, C's, G's, and T's.
 
-To be fancy, I'm using a little helper program (package) called [pyperclip](https://pypi.org/project/pyperclip/) to drop the answer onto my clipboard so all I have to do is paste it in the answer box.
+```aiignore
+    return (
+        sequence.count("A"),
+        sequence.count("C"),
+        sequence.count("G"),
+        sequence.count("T")
+    )
+```
+
+I'm writing my results to a text file so that I can upload them easily.
 ## Inefficient solution
-My solution ran on the test set I got from [Project Rosalind](https://rosalind.info/about/) in less than a second, but it's not the fastest solution because it has to go all the way through the test set four times.
+My solution ran on the test set in less than a second, but it's not the fastest solution because it has to go all the way through the test set four times.
 Once to count the A's, once to count the C's, etc...
 
 Since the problem tells us the maximum number of letters in the test set is 1000, and we have 5 minutes to solve the problem, my inefficient solution that takes less than a second is fine.
