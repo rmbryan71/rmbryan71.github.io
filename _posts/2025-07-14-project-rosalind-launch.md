@@ -11,6 +11,7 @@ while documenting the process here.
 1. **AI Use**: I'm not going to use any AI tools for this project because I'm doing this to learn how to document the problem-solving process.
 2. **Posting Code**: I'm sharing my code repository [here](https://github.com/rmbryan71/rosalind).
 3. **Language**: Mostly [Python](https://www.python.org/).
+
 # Getting Started
 I've solved 37 of these problems already. 
 You can see my [progress](https://rosalind.info/users/rmbryan/). 
