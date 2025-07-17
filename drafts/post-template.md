@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Title"
-date:   2025-MM-DD
+date:   2025-07-18
 ---
 
 [This](https://rosalind.info/problems/xxxx/) problem asks:
