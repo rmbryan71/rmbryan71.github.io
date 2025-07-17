@@ -39,7 +39,7 @@ Then we just count all the A's, C's, G's, and T's.
     )
 ```
 
-I'm writing my results to a text file so that I can upload them easily.
+I write my results to a text file so that I can upload them easily.
 ## Inefficient solution
 My solution ran on the test set in less than a second, but it's not the fastest solution because it has to go all the way through the test set four times.
 Once to count the A's, once to count the C's, etc...
