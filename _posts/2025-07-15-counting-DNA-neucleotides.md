@@ -46,7 +46,7 @@ Once to count the A's, once to count the C's, etc...
 
 Since the problem tells us the maximum number of letters in the test set is 1000, and we have 5 minutes to solve the problem, my inefficient solution that takes less than a second is fine.
 
-If I wanted to shave off some milliseconds, I would set up four counters: A, C, G, and T. Then I would run through the list one time and increment the counter that matches the letter in the test set, but I don't care about the extra time, so my simple solution is fine for this purpose.
+If I wanted to make my solution faster over much larger datasets, I would set up four counters: A, C, G, and T. Then I would run through the list one time and increment the counter that matches the letter in the test set, but I don't care about the extra time, so my simple solution is fine for this purpose.
 
 ## Conclusion
 This is one of the easiest problems in the set.
