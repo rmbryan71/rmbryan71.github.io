@@ -23,7 +23,7 @@ This problem's abbreviation is "dna", so the download file will be called "rosal
 Then you have 5 minutes to upload your answer. 
 
 Since time is limited and we don't want to waste time looking for files or moving them around, we'll start our program by opening the specific file in the downloads folder.
-For me, that's 'file_path = "/Users/robertbryan/Downloads/rosalind_dna.txt"'
+For me, that's '''file_path = "/Users/robertbryan/Downloads/rosalind_dna.txt"'''
 
 ## Solution steps
 Python includes a [list count method](https://www.w3schools.com/python/ref_list_count.asp) that solves this problem for us.
