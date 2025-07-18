@@ -11,3 +11,9 @@ date:   2025-07-18
 > **Return**: Y
 
 # First impression
+
+
+# Solution steps
+
+
+# Conclusion
