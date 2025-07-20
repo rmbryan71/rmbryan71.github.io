@@ -13,4 +13,5 @@ I generally follow these steps for each problem-article pair that I write:
 Publish the oldest articles first, and don't publish more than one per day.
 1. Let the article sit in drafts for at least 24 hours, revise as needed.
 2. Proof read, think about how the article could be improved, revise.
-3. When satisfied, move to the _posts folder and commit to publish.
+3. When satisfied, change the date on the article header to today's date
+4. Move to the _posts folder and commit to publish.
