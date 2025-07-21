@@ -30,6 +30,10 @@ github_username:  rmbryan71
 theme: minima
 plugins:
   - jekyll-feed
+minima:
+  nav_pages:
+    -about.md
+    -portfolio.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
