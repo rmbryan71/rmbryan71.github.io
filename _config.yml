@@ -21,7 +21,6 @@
 title: Rob Bryan
 email: rob@robertbryan.net
 description: >- # this means to ignore newlines until "baseurl:"
-  Technical Writing Project Rosalind
 baseurl: "" # the subpath of your site, e.g. /blog
 # url: http://robertbryan.net
 github_username:  rmbryan71
