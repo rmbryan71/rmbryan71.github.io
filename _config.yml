@@ -32,7 +32,7 @@ plugins:
   - jekyll-feed
 minima:
   nav_pages:
-    -about.md
+    -about_me.md
     -portfolio.md
 
 # Exclude from processing.
