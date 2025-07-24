@@ -4,7 +4,7 @@ I generally follow these steps for each problem-article pair that I write:
 2. Create an article in the _drafts folder by refactor->copy file on the post-template.md.
 3. Fill in the template with information from the problem.
 4. Restate the problem.
-5. Create a python file and start coding.
+5. Create a Python file and start coding.
 6. Keep notes in the article file of what I'm trying and how it works.
 7. Iterate until the problem gets solved.
 8. Write the Solution steps based on the notes.
