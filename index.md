@@ -6,4 +6,4 @@ layout: home
 ---
 ![dna-1811955_1920.jpg](assets/dna-1811955_1920.jpg)
 
-A blog about technical writing, bioinformatics, and python.
+A blog about technical writing, bioinformatics, and Python.
