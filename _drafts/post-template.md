@@ -12,7 +12,7 @@ date:   2025-07-18
 
 <!--break-->
 
-# Required reading
+# References
 
 # Restate the problem
 
