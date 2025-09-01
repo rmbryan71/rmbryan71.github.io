@@ -14,7 +14,7 @@ date:   2025-07-18
 
 # References
 
-# Restate the problem
+# Restating the problem
 
 
 # Solution steps
