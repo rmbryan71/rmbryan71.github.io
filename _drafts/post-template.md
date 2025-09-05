@@ -35,6 +35,12 @@ date:   2025-07-18
 
 **Most time-consuming facet:** 
 
+**Questions from others:** 
+
+**Solutions from others:**
+
+**Problem explanation:** 
+
 **Accomplishments and badges:** 
 
 **Closing thoughts:** 
