@@ -1,6 +1,5 @@
 ---
 layout: page
-title: "Future Plan"
 ---
 # Change log
 January 9, 2026 v 0.01 - initial release  
