@@ -1,5 +1,6 @@
 ---
 layout: page
+title: "Lab notebook"
 ---
 # Introduction
 This is where I keep track of what I'm thinking and doing.
