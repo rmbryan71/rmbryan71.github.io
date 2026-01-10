@@ -1,5 +1,6 @@
 ---
 layout: page
+title: "Constitution"
 ---
 # Change log
 January 9, 2026: v 0.04 - overhaul, move to web

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Experimental Baseball League"
+title: "EBL Home"
 ---
 # League lists
 1. Team Rosters
