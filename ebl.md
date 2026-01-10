@@ -14,4 +14,3 @@ title: "EBL Home"
 2. [Communications plan](/ebl/comms.md)
 3. [Technical development plan](/ebl/tech.md)
 4. [Future plan](/ebl/future.md)
-5. 
