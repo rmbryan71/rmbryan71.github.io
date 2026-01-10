@@ -3,6 +3,11 @@ layout: page
 title: "Constitution"
 ---
 # Change log
+January 10, 2026: v 0.04 - documentation changes
+- overhauls wording throughout
+- updates formatting for readability
+- 
+
 January 9, 2026: v 0.04 - overhaul, move to web
 - removes implementation section to [tech plan](/ebl/tech.html)
 - removes irrelevant conversational tangents
@@ -31,37 +36,28 @@ January 7, 2026: v 0.02 - documentation changes
 
 January 6, 2026: v 0.01 - initial release
 # Introduction
-I'm launching a fantasy baseball service for the 2026 season with:
+The Experimental Baseball League includes:
 1. Phillies players only.
 2. A live auction for players.
 3. Scores tallied weekly.
-
-Those core features are unlikely to change.
-
-Everything else is experimental.
-
-I am absolutely open to ideas and questions.
-
-Please send ideas and questions.
 # General Rules
 These are the current league rules:
-1. Participation is free.
-2. There is no prize money.
-3. There are 8 team franchises in the league.
+1. Participation is free, and there is no prize money.
+3. There are 8 teams in our league.
 4. Each team has 4 roster spots.
-5. Pitchers compete based on Innings Pitched.
-7. Hitters compete based on Total Bases + Walks + HBP + Steals (aka "Offense").
+5. Pitching is measured by Innings Pitched.
+7. Offense is measured by the sum of Total Bases + Walks + HBP + Steals.
 # Scoring
-1. Every week, points are awarded to teams as follows:
-2. Team with most Innings Pitched that week gets 10 points
-3. Team with next most Innings Pitched that week gets 8 points
-4. Team with next most Innings Pitched that week gets 4 points
-5. Team with most Offense that week gets 10 points
-6. Team with next most Offense that week gets 8 points
-7. Team with next most Offense that week gets 4 points
+Every week, points are awarded to teams as follows:
+2. Team with most pitching that week gets 10 points
+3. Team with next most pitching that week gets 8 points
+4. Team with next most pitching that week gets 4 points
+5. Team with most offense that week gets 10 points
+6. Team with next most offense that week gets 8 points
+7. Team with next most offense that week gets 4 points
 8. Partial weeks at the beginning of the year, the all-star break, and the end of the year all get the same points awarded as full weeks.
-9. If a pitcher hits and gets on base, that counts.
-10. If a hitter pitches and gets outs, those count.
+9. If a pitcher gets on base, that counts as offense.
+10. If a hitter gets pitching outs, those count.
 ## Ties
 1. All teams tied for a position get all the points for that spot as if there were no tie.
 2. No points are awarded for second place if two teams tie for first place.

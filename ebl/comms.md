@@ -4,30 +4,26 @@ title: "Comms Plan"
 ---
 # Change log
 January 9, 2026 v 0.01 - initial release
+January 10, 2026 v 0.02 - documentation overhaul
+* removes details about moving to the web
+* adds future section
 # Introduction
-Currently, I'm editing a single, local text file which I render as a version-specific PDF and manually upload to my website. Then I send links to owners by text message and email.
-# Requirements for next iteration:
-1. Version control through git
-2. Serve content as a web page, not PDF
-3. Let people navigate to an Experimental Baseball League landing page from robertbryan.net
-4. Serve multiple pages from the landing page
-5. email people when there are significant changes
-# Plan:
-1. Move content into PyCharm
-	1. **Blocker**: My free version of PyCharm doesn't support the HTML editing tools from IntelliJ.
-	   I could code the HTML by hand.
-	   I could get a different editor.
-   2. **Decision**: Code the HTML by hand for now. Get a better editor later.
-2. Synchronize through github
-3. Create Experimental Baseball League landing page
-4. Add Experimental Baseball League link to robertbryan.net homepage
-5. Publish
-6. Test
-	1. Technically works, but looks like trash.
-	2. I need to figure out how to use the github pages engine correctly so that it applies formatting like in the blog posts.
-   3. This is happening now.
-7. Add other pages
-   1. Happening now
-8. Put links to other pages on landing page
-9. Publish
-10. Test
+This is where I document how information moves in the Experimental Baseball League.
+# Current state
+After beginning with text rendered to PDF, I've moved to:
+1. League content is in [GitHub](https://github.com/rmbryan71/rmbryan71.github.io), served with [kramdown](https://kramdown.gettalong.org/) and [jekyll](https://jekyllrb.com/) through [GitHub Pages](https://docs.github.com/en/pages) to [our website](https://www.robertbryan.net/ebl.html).
+2. Editing content and synchronizing with GitHub with [PyCharm Community Edition (CE)](https://www.jetbrains.com/pycharm/).
+3. An "Experimental Baseball League" label in Gmail that I use to :bcc owners about updates.
+# Future
+{:start="1"}
+1. All comms should be clearly marked as either "Information only" or "Action required"
+   2. There should never be "Action required"
+2. Optional group chat
+2. Feedback button on web pages
+3. Opt-in to event-driven comms:
+   4. Weekly scores are posted
+   5. Players join or leave the Phillies
+   6. Roster moves in our league
+   7. Standout performances by players
+8. Comms for non-owner spectators
+9. Handle comms in the league system without gmail
