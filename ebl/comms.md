@@ -15,7 +15,6 @@ After beginning with text rendered to PDF, I've moved to:
 2. Editing content and synchronizing with GitHub with [PyCharm Community Edition (CE)](https://www.jetbrains.com/pycharm/).
 3. An "Experimental Baseball League" label in Gmail that I use to :bcc owners about updates.
 # Future
-{:start="1"}
 1. All comms should be clearly marked as either "Information only" or "Action required"
    2. There should never be "Action required"
 2. Optional group chat
