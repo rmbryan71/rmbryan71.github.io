@@ -45,6 +45,7 @@ This document defines my approach and tracks my progress toward providing the le
 7. Allow multi-tenancy (many leagues)
 
 # Development phases
+
 ## Manual
 I'm not planning to do this, it's just a thought experiment.
 {:start="1"}
@@ -62,32 +63,42 @@ I'm not planning to do this, it's just a thought experiment.
 	4. update workbook
 	5. process roster moves by hand
 	6. send out comms
+
 ## Database
+{:start="1"}
 1. Roster move requests submitted by email
 2. Getting data is manual
 3. Calculations done by a database
 4. Roster move requests done manually
 5. Results served by Google Sheets
+
 ## Automated data in
+{:start="1"}
 1. Roster move requests submitted by email
 2. Getting data is automated
 3. Calculations done by a database
 4. Roster move requests done manually
 5. Results served by Google Sheets
+
 ## Automated roster moves
+{:start="1"}
 1. Roster move requests submitted by email
 2. Getting data is automated
 3. Calculations done by a database
 4. Roster move requests processed by code
 5. Results served by Google Sheets
+
 ## Informational web
+{:start="1"}
 1. Roster move requests submitted by email
 2. Getting data is automated
 3. Calculations done by a database
 4. Roster move requests processed by code
 5. Results served as lists on a website
+
 ## Transactional web 
-Requires website supports authentication
+{:start="1"}
+**Requires a website that supports authentication**
 1. Roster move requests submitted on website
 2. Getting data is automated
 3. Calculations done by a database

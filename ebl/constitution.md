@@ -42,7 +42,7 @@ The Experimental Baseball League includes:
 3. Scores tallied weekly.
 
 # General Rules
-These are the current league rules:
+{:start="1"}
 1. Participation is free, and there is no prize money.
 3. There are 8 teams in our league.
 4. Each team has 4 roster spots.
@@ -50,6 +50,7 @@ These are the current league rules:
 7. Offense is measured by the sum of Total Bases + Walks + HBP + Steals.
 
 # Scoring
+{:start="1"}
 Every week, points are awarded to teams as follows:
 2. Team with most pitching that week gets 10 points.
 3. Team with next most pitching that week gets 8 points.
@@ -62,7 +63,7 @@ Every week, points are awarded to teams as follows:
 10. If a hitter gets pitching outs, those count.
 
 ## Ties
-
+{:start="1"}
 1. All teams tied for a position get all the points for that spot as if there were no tie.
 2. No points are awarded for second place if two teams tie for first place.
 3. No points are awarded for third place if two or more teams tie for second place.
@@ -70,6 +71,7 @@ Every week, points are awarded to teams as follows:
 5. If there's a six-way tie for third, all six teams get third place points.
 
 # Rosters
+{:start="1"}
 1. Only players on the Phillies roster can be on teams in our league.
 2. If a player on your team gets traded away from the Phillies, retires, dies, gets picked up by another team on waivers, or leaves the organization for any reason, you have an empty roster spot to fill.
 3. There is specifically no remedy for suspensions or injuries. Those do not create empty roster spots. 
@@ -78,6 +80,7 @@ Every week, points are awarded to teams as follows:
 6. If you have a player that gets sent down or called up, you don't have to do anything.
 7. If you want all pitchers, all hitters, or any mix of hitters and pitchers, that's fine. It's entirely up to you.
 # Roster moves
+{:start="1"}
 1. You can make a maximum of 1 roster move attempt per week.
 2. Even if you have more than one open roster spot, you only get one roster move attempt per week.
 3. Roster moves happen Sunday night after points are awarded.
@@ -91,6 +94,7 @@ Every week, points are awarded to teams as follows:
 12. There's no trading players between teams.
 
 # The auction
+{:start="1"}
 1. This will be a Zoom call at 6:00 PM on Sunday, March 22, 2026.
 2. Every team gets $100 to field their team.
 3. All bids are whole-dollar values, no pennies.
@@ -108,9 +112,11 @@ Every week, points are awarded to teams as follows:
 14. Ownership of players is for the 2026 season only.
 
 # Privacy
+{:start="1"}
 1. Nobody should have to reveal who they are in order to participate. 
 2. Everything should be anonymized and free of personally identifiable information.
 
 # Audit trail
+{:start="1"}
 1. The league implementation has to have a detailed audit trail of everything that happens in the league, including roster move attempts, statistic updates, point awards, data corrections, and, later, logins and anonymized owner actions.
 2. The audit trail has to be available to everyone in the league all the time.
