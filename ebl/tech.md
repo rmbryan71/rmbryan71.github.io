@@ -4,6 +4,10 @@ title: "Tech Plan"
 ---
 # Change log
 January 9, 2026 v 0.01 - initial release
+
+January 10, 2026 v 0.02 - documentation changes
+- work in progress
+
 # Introduction
 The league rules lead to technical requirements.
 
@@ -14,9 +18,11 @@ This document defines my approach and tracks my progress toward providing the le
 3. Decomposition : divide problems
 4. Openness : share and listen
 5. Fun : Enjoy this
-# List of Challenges
+
+# Lists of Challenges
+
 ## Process challenges
-How to:
+{:start="1"}
 1. choose a technology stack
 2. choose a web host
 3. document a design
@@ -27,8 +33,9 @@ How to:
 8. iterate
 9. maintain
 10. expand
+
 ## Technical challenges
-How to:
+{:start="1"}
 1. Communicate with and between owners
 2. Get roster data from MLB
 3. Get performance statistics from MLB
@@ -36,9 +43,11 @@ How to:
 5. Design the web front end
 6. Handle user accounts
 7. Allow multi-tenancy (many leagues)
-# Phases
+
+# Development phases
 ## Manual
 I'm not planning to do this, it's just a thought experiment.
+{:start="1"}
 1. Roster move requests by email
 2. Shared Google Sheets workbook
 	1. BLE team rosters
