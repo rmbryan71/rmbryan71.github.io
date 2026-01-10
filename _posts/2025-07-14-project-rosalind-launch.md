@@ -8,8 +8,7 @@ date:   2025-07-14
 # Me
 Hi, I'm Rob. I'm a [technical writer](https://www.linkedin.com/in/rmbryan/) in the process of working the 
 [Project Rosalind](https://rosalind.info/about/) set of bioinformatics problems.
-For each problem in Project Rosalind, I'll post about the key points on my path to a solution as well as the bioinformatics and Python concepts
-I learn along the way.
+For each problem in Project Rosalind, I'll post about the key points on my path to a solution as well as the bioinformatics and Python concepts I learn along the way.
 
 # Rosalind Franklin
 ![rosalind-franklin.jpg](../assets/rosalind-franklin.jpg)
