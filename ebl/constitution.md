@@ -4,10 +4,9 @@ title: "Constitution"
 ---
 # Change log
 January 9, 2026: v 0.04 - overhaul, move to web
-- removes implementation section to [tech plan](/ebl/tech.md)
+- removes implementation section to [tech plan](/ebl/tech.html)
 - removes irrelevant conversational tangents
-- removes communications plan to [comms plan](/ebl/comms.md)
-- 
+- removes communications plan to [comms plan](/ebl/comms.html)
 
 January 8, 2026: v 0.03 - documentation changes
 - overhauls the auction

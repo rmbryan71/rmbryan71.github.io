@@ -2,7 +2,7 @@
 layout: page
 title: "EBL Home"
 ---
-# League lists
+# League lists _(coming eventually)_
 1. Team Rosters
 2. Available Phillies
 3. This week's stats
