@@ -18,7 +18,7 @@ After beginning with text rendered to PDF, I've moved to:
 {:start="1"}
 1. All comms should be clearly marked as either "Information only" or "Action required"
    2. There should never be "Action required"
-2. Optional group chat
+3. Optional group chat
 2. Feedback button on web pages
 3. Opt-in to event-driven comms:
    4. Weekly scores are posted
