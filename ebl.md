@@ -2,9 +2,9 @@
 layout: page
 title: "EBL Home"
 ---
-# League lists _(coming eventually)_
-1. Team rosters
-2. Available Phillies
+# League lists _(happening gradually)_
+1. Team rosters 
+2. [Phillies 40-man roster](/ebl/40-man-roster.md)
 3. This week's stats
 4. Leaderboard
 5. Roster move history

@@ -3,10 +3,9 @@ layout: page
 title: "Tech Plan"
 ---
 # Change log
-January 9, 2026 v 0.01 - initial release
-
+January 9, 2026 v 0.01 - initial release  
 January 10, 2026 v 0.02 - documentation changes
-- work in progress
+- formatting and layout
 
 # Introduction
 The league rules lead to technical requirements.

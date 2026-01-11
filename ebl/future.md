@@ -7,7 +7,6 @@ January 9, 2026 v 0.01 - initial release
 January 10, 2026 v 0.02 - documentation updates
 - adds automated auction
 - sorts list
-- work in progress
 
 # Introduction
 These are the features I want to develop later in rough order of priority:

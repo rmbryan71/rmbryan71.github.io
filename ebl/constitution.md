@@ -6,7 +6,7 @@ title: "Constitution"
 January 10, 2026: v 0.04 - documentation changes
 - overhauls wording throughout
 - updates formatting for readability
-- work in progress
+- adds 40-man roster requirement
 
 January 9, 2026: v 0.04 - overhaul, move to web
 - removes implementation section to [tech plan](/ebl/tech.html)
@@ -72,11 +72,11 @@ Every week, points are awarded to teams as follows:
 
 # Rosters
 {:start="1"}
-1. Only players on the Phillies roster can be on teams in our league.
+1. Only players on the Phillies 40-man roster can be on teams in our league.
 2. If a player on your team gets traded away from the Phillies, retires, dies, gets picked up by another team on waivers, or leaves the organization for any reason, you have an empty roster spot to fill.
 3. There is specifically no remedy for suspensions or injuries. Those do not create empty roster spots. 
 4. You do not have to fill empty roster spots immediately, or ever.
-5. Phillies players at any level of the majors and minors are eligible to be on teams, but only major league production counts.
+5. Only major league production counts.
 6. If you have a player that gets sent down or called up, you don't have to do anything.
 7. If you want all pitchers, all hitters, or any mix of hitters and pitchers, that's fine. It's entirely up to you.
 # Roster moves
