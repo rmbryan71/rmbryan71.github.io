@@ -3,10 +3,14 @@ layout: page
 title: "Future Plan"
 ---
 # Change log
-January 9, 2026 v 0.01 - initial release  
+January 11, 2006 v 0.03 - documentation updates
+- adds long-term technical goals 
+
 January 10, 2026 v 0.02 - documentation updates
 - adds automated auction
-- sorts list
+- sorts list  
+
+January 9, 2026 v 0.01 - initial release  
 
 # Introduction
 These are the features I want to develop later in rough order of priority:
@@ -22,4 +26,7 @@ These are the features I want to develop later in rough order of priority:
    11. Dropped third strike. 
    12. Fan interference.
    13. Fielder's choice? Maybe.
-8. Use GitHub issues to let people vote on which future features they would like to see most.
+8. Use GitHub issues to let people vote on which future features they would like to see most. 
+9. Support leagues for other teams.
+10. Support multi-tenancy to allow many leagues.
+11. Add player birthdays, photos, fun facts, this date in history, team milestones, league milestones, and Phillies news

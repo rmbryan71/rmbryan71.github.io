@@ -118,5 +118,5 @@ Every week, points are awarded to teams as follows:
 
 # Audit trail
 {:start="1"}
-1. The league implementation has to have a detailed audit trail of everything that happens in the league, including roster move attempts, statistic updates, point awards, data corrections, and, later, logins and anonymized owner actions.
+1. The league implementation has to have a detailed, immutable audit trail of everything that happens in the league, including roster move attempts, statistic updates, point awards, data corrections, and, later, logins and anonymized owner actions.
 2. The audit trail has to be available to everyone in the league all the time.
