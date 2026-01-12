@@ -2,7 +2,7 @@
 layout: page
 title: "EBL Home"
 ---
-# League lists _(happening gradually)_
+# Experimental Baseball League (EBL) lists _(happening gradually)_
 1. Team rosters 
 2. [Phillies 40-man roster](/ebl/40-man-roster.md)
 3. This week's stats
