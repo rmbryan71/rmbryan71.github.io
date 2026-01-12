@@ -6,7 +6,7 @@ title: "Lab notebook"
 This is where I keep track of what I'm thinking and doing.
 
 # January 11, 2026
-Worked on documentation. Drastically simplified the [tech plan](/ebl/tech.md).  
+Worked on documentation. Drastically simplified the [tech plan](/ebl/tech.html).  
 It's time to make a [database](https://en.wikipedia.org/wiki/Database).  
 All of my experience is with [Postgres](https://en.wikipedia.org/wiki/PostgreSQL).  
 In this case, though, I'm going to start with [SQLite](https://en.wikipedia.org/wiki/SQLite) because:
@@ -19,7 +19,7 @@ An hour? More like, what, 8 minutes?
 That could not _possibly_ have been any easier.  
 Cool. Okay, now what?  
 [Database design](https://en.wikipedia.org/wiki/Database_design), probably.  
-I'm working [here](/ebl/db-design.md).  
+I'm working [here](/ebl/db-design.html).  
 8:55 PM - Design is complete. I have a [db-make.py](https://github.com/rmbryan71/ebl/blob/main/db-make.py) that creates all the tables, fields, and foreign key constraints.  
 Do I want my db file in git? Oh, it's binary, probably not.  
 
@@ -32,6 +32,6 @@ I'm going to put an hour into trying to write a Python program to fetch the Phil
 2. I registered for an MLB Advanced Media API account. They're going to review my application.  
 3. I found a [Python wrapper for the MLB API](https://github.com/toddrob99/MLB-StatsAPI).
 4. I made a request and got data. Didn't need an account.
-5. I got the [current Phillies 40-man roster](https://www.mlb.com/phillies/roster/40-man) and [wrote it to a file](/ebl/40-man-roster.md).  
+5. I got the [current Phillies 40-man roster](https://www.mlb.com/phillies/roster/40-man) and [wrote it to a file](/ebl/40-man-roster.html).  
 
 That was easy.

@@ -4,7 +4,7 @@ title: "Tech Plan"
 ---
 # Change log
 January 11, 2026 v 0.03 - documentation changes
-- removes long-range plans to [future](/ebl/future.md)
+- removes long-range plans to [product roadmap](/ebl/future.html)
 - simplifies plan drastically
 - replaces list of tech challenges with development plan
 - replaces list of process challenges with a process plan
@@ -47,8 +47,8 @@ This is how I would run the league if I had no automation.
 
 # Development plan
 {:start="1"}
-1. Get some data from MLB - [Done](/ebl/40-man-roster.md) 2026-01-10
-2. Design a database - [Done](/ebl/db-design.md) 2026-01-11
+1. Get some data from MLB - [Done](/ebl/40-man-roster.html) 2026-01-10
+2. Design a database - [Done](/ebl/db-design.html) 2026-01-11
 3. Make the database as designed - [Done](https://github.com/rmbryan71/ebl/blob/main/db-make.py) 2026-01-11
 3. Put data in
 4. Get data out
@@ -61,7 +61,7 @@ This is how I would run the league if I had no automation.
 
 # Process plan
 {:start="1"}
-1. choose a technology stack - [Happening](/ebl/lab.md)
+1. choose a technology stack - [Happening](/ebl/lab.html)
 2. choose a web host
 3. document a design
 4. establish a construction practice
