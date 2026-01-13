@@ -5,6 +5,27 @@ title: "Lab notebook"
 # Introduction
 This is where I keep track of what I'm thinking and doing.
 
+# January 12, 2026
+5:30 AM - Fixed a few broken links and formatting annoyances on the website.  
+Now I'm going to start adding triggers to the database so that all changes get written to the audit log.  
+6:10 AM - AI is helpful. I'm using free ChatGPT. My [db-make.py](https://github.com/rmbryan71/ebl/blob/main/db-make.py) now creates triggers so that all table updates write to the audit trail.  Later, I might want to split db-make into schema, triggers, and indexes.  
+6:40 AM - I'm working on a function to get player data from MLB and write it into my player table. There's a much better Python wrapper for the MLB API, but I need to upgrade Python to use it.  
+6:56 AM - That worked well. I'm on Python 3.14 now. Upgraded to the latest PyCharm while I was at it.  
+End session. Next time: Use the new Python wrapper to sync MLB API roster data to the players table.
+
+3:50 PM - I upgraded to ChatGPT plus for $20/month. I use it for other things as well. It's been extremely helpful so far with coding, so the Experimental Baseball League is now operating at a loss.  
+4:00 PM - Oooooh, my ChatGPT plus subscription comes with Codex that integrates right into the IDE, but not PyCharm... or wait, does it? This is probably worth doing. This is what I'm doing now.  
+4:30 PM - Wow, okay. Wow. I have the Codex AI agent integrated into my IDE. It has read and understood the requirements I documented in the [EBL Constitution](/ebl/constitution.html). It understands how the MLB API works. It understands how my database works. It obviously knows how to do everything in Python.  
+4:45 PM - My role is different now. I don't have to figure out how to do the things I want to do. It knows how to do everything. I just need to be clear about telling it exactly what I want.  
+5:00 PM - This changes a lot. I don't have to limit myself to what I think I can code. That was holding me back. For now, I'm going to keep moving forward with my plan, but I'm open to the possibility that having AI available to do things for me means I can do different things, not just the same things faster.  
+5:20 PM - This is going to take some getting used to.  
+5:55 PM - More progress than I can summarize. I have a web front end now, running locally. Taking a break to walk and eat dinner.  
+
+7:05 PM - I have roster-sync so that it asks for a date and sets the player table to that date.  
+8:05 PM - I have a working web app that reads from my database and a prototype landing page.  
+![ebl-rosters-prototype.png](../assets/ebl-rosters-prototype.png)  
+8:15 PM - What next?
+
 # January 11, 2026
 Worked on documentation. Drastically simplified the [tech plan](/ebl/tech.html).  
 It's time to make a [database](https://en.wikipedia.org/wiki/Database).  
