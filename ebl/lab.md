@@ -24,7 +24,7 @@ End session. Next time: Use the new Python wrapper to sync MLB API roster data t
 7:05 PM - I have roster-sync so that it asks for a date and sets the player table to that date.  
 8:05 PM - I have a working web app that reads from my database and a prototype landing page.  
 ![ebl-rosters-prototype.png](../assets/ebl-rosters-prototype.png)  
-8:15 PM - What next?
+8:55 PM - I have a prototype of a leaderboard. Taking a break.
 
 # January 11, 2026
 Worked on documentation. Drastically simplified the [tech plan](/ebl/tech.html).  
