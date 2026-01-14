@@ -1,8 +1,8 @@
 ---
 layout: page
-title: "EBL Rules"
+title: "Experimental Baseball League Rules"
 ---
-The Experimental Baseball League has a [live](https://ebl-k2sj.onrender.com/) prototype.
+The Experimental Baseball League has a [live](https://ebl-k2sj.onrender.com/) prototype.  
 You can always get the [latest development news here](lab.html).
 
 # Change log
