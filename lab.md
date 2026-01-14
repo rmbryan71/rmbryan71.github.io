@@ -15,6 +15,7 @@ Drastically simplified the website by removing basically everything except the r
 7:00 PM - Made a few last changes. I'm ready to have people look at this and give feedback. Working on deployment.  
 7:30 PM - I am now a Render Professional license owner. The Experimental Baseball League, which was already operating at a loss because of my ChatGPT license, is now setting money on fire as quickly as we can light it up.  
 7:40 PM - We are live to the world. Our url is: [https://ebl-k2sj.onrender.com/](https://ebl-k2sj.onrender.com/). Now updating the website and sending out comms.  
+8:05 PM - I sent out an email to the league.
 
 # January 12, 2026
 5:30 AM - Fixed a few broken links and formatting annoyances on the website.  
