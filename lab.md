@@ -5,6 +5,17 @@ title: "Lab notebook"
 # Introduction
 This is where I keep track of what I'm thinking and doing.
 
+# January 13, 2026
+6:35 AM - Designing screens before work.
+
+4:35 PM - Resolved some security vulnerabilities in the website thanks to [dependabot](https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configuring-dependabot-security-updates).  
+Drastically simplified the website by removing basically everything except the rules. Everything else was helpful in getting me started, but development is going so fast, just keeping the documentation up to date was slowing me down, so I cut it. I have a web front-end already, so I'm never going to serve the league as a set of texts lists, so we don't need stubs for where those lists will go.  
+5:45 PM - I have a scoring function that awards points on Sunday night according to the rules and appears to handle ties correctly.  
+6:45 PM - I have working prototypes of all the main screens.
+7:00 PM - Made a few last changes. I'm ready to have people look at this and give feedback. Working on deployment.  
+7:30 PM - I am now a Render Professional license owner. The Experimental Baseball League, which was already operating at a loss because of my ChatGPT license, is now setting money on fire as quickly as we can light it up.  
+7:40 PM - We are live to the world. Our url is: https://ebl-k2sj.onrender.com/. Now updating the website and sending out comms.
+
 # January 12, 2026
 5:30 AM - Fixed a few broken links and formatting annoyances on the website.  
 Now I'm going to start adding triggers to the database so that all changes get written to the audit log.  
@@ -23,8 +34,11 @@ End session. Next time: Use the new Python wrapper to sync MLB API roster data t
 
 7:05 PM - I have roster-sync so that it asks for a date and sets the player table to that date.  
 8:05 PM - I have a working web app that reads from my database and a prototype landing page.  
-![ebl-rosters-prototype.png](../assets/ebl-rosters-prototype.png)  
-8:55 PM - I have a prototype of a leaderboard. Taking a break.
+![ebl-rosters-prototype.png](assets/ebl-rosters-prototype.png)  
+8:55 PM - I have a prototype of a leaderboard.  
+![ebl-leaderboard-prototype.png](assets/ebl-leaderboard-prototype.png)  
+The drop-down lets you select any week. All the data is from the database. All the queries work. I'm using 2025 stats for testing. Players are assigned randomly to EBL teams for testing. Team names are randomly assigned from a list of fantasy baseball team names I found online.  
+That's it for today.
 
 # January 11, 2026
 Worked on documentation. Drastically simplified the [tech plan](/ebl/tech.html).  
