@@ -2,6 +2,9 @@
 layout: page
 title: "Lab notebook"
 ---
+
+**This file is deprecated. It's now in the Experimental Baseball League codebase.**
+
 # Introduction
 This is where I keep track of what I'm thinking and doing.
 
@@ -11,6 +14,8 @@ This is where I keep track of what I'm thinking and doing.
 5:05 AM - Struggling to authenticate to an existing AWS account to set up email sending.
 5:45 AM - Created new AWS account and spent 40 minutes trying to figure out how to add new CNAME records to robertbryan.net.  
 
+4:35 PM - I've decided that sending email can wait for later. Instead of that, I'm going to work on... what exactly? Not sure. I'll start with a review of the requirements and update my lists.
+
 
 # January 14, 2026
 4:30 PM - This is my list of things I want to work on in rough priority order:
@@ -19,17 +24,8 @@ This is where I keep track of what I'm thinking and doing.
 3. Database persistence - done
 4. Load 2025 season data into prod - done
 5. Web view of audit trail - done
-5. User accounts - 
-6. Authentication
-7. Roster moves
-8. Move the rules into the app
-8. Admin panel
-9. Permanent hosting
-9. Auction automation
-10. Multiple leagues
-11. Public Sign Up
-12. Non-Phillies teams 
-13. AI bots that participate in auctions  
+
+
 
 6:05 PM - I'm satisfied with the web app overhaul to make it cell friendly.  
 6:35 PM - In the future, should remember to put the server in maintenance mode before pushing experimental code.  
@@ -74,9 +70,9 @@ End session. Next time: Use the new Python wrapper to sync MLB API roster data t
 
 7:05 PM - I have roster-sync so that it asks for a date and sets the player table to that date.  
 8:05 PM - I have a working web app that reads from my database and a prototype landing page.  
-![ebl-rosters-prototype.png](assets/ebl-rosters-prototype.png)  
+![ebl-rosters-prototype.png](../assets/ebl-rosters-prototype.png)  
 8:55 PM - I have a prototype of a leaderboard.  
-![ebl-leaderboard-prototype.png](assets/ebl-leaderboard-prototype.png)  
+![ebl-leaderboard-prototype.png](../assets/ebl-leaderboard-prototype.png)  
 The drop-down lets you select any week. All the data is from the database. All the queries work. I'm using 2025 stats for testing. Players are assigned randomly to EBL teams for testing. Team names are randomly assigned from a list of fantasy baseball team names I found online.  
 That's it for today.
 

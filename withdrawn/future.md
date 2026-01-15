@@ -3,7 +3,10 @@ layout: page
 title: "Product Roadmap"
 ---
 # Change log
-January 11, 2006 v 0.03 - documentation updates
+January 15, 2026 v 0.04 - deprecated document
+- This is just for me now. I'm moving things to this list when they don't belong in the current requirements.
+
+January 11, 2026 v 0.03 - documentation updates
 - adds long-term technical goals 
 
 January 10, 2026 v 0.02 - documentation updates
@@ -30,3 +33,9 @@ These are the features I want to develop later in rough order of priority:
 9. Support leagues for other teams.
 10. Support multi-tenancy to allow many leagues.
 11. Add player birthdays, photos, fun facts, this date in history, team milestones, league milestones, and Phillies news
+12. Permanent hosting
+9. Auction automation
+10. Multiple leagues
+11. Public Sign Up
+12. Non-Phillies teams 
+13. AI bots that participate in auctions  

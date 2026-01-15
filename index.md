@@ -6,6 +6,4 @@ layout: home
 ---
 ![dna-1811955_1920.jpg](assets/dna-1811955_1920.jpg)
 
-A blog about technical writing, bioinformatics, baseball, and Python.
-
-Also, home of the [Experimental Baseball League](ebl.md).
+A blog about technical writing, bioinformatics, [baseball](https://ebl-k2sj.onrender.com/), and Python.

@@ -2,6 +2,10 @@
 layout: page
 title: "Experimental Baseball League Rules"
 ---
+
+**This file is deprecated. It's now in the Experimental Baseball League codebase.**
+
+
 The Experimental Baseball League has a [live](https://ebl-k2sj.onrender.com/) prototype.  
 You can always get the [latest development news here](lab.html).
 
