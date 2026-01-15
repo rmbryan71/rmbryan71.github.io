@@ -5,6 +5,38 @@ title: "Lab notebook"
 # Introduction
 This is where I keep track of what I'm thinking and doing.
 
+# January 14, 2026
+4:30 PM - This is my list of things I want to work on in rough priority order:
+1. Web layout that looks good on cell - done
+2. Scoring that goes weekly instead of whole season at once - done
+3. Database persistence - done
+4. Load 2025 season data into prod - done
+5. Web view of audit trail - done
+5. User accounts - 
+6. Authentication
+7. Roster moves
+8. Move the rules into the app
+8. Admin panel
+9. Permanent hosting
+9. Auction automation
+10. Multiple leagues
+11. Public Sign Up
+12. Non-Phillies teams 
+13. AI bots that participate in auctions  
+
+6:05 PM - I'm satisfied with the web app overhaul to make it cell friendly.  
+6:35 PM - In the future, should remember to put the server in maintenance mode before pushing experimental code.  
+6:45 PM - I've migrated from SQLite to Postgres in prod. The new web layout looks good on cell.
+7:02 PM - I've loaded all 2025 season stats into the prod db and run scoring. Everything looks good.
+7:50 PM - I might need to install Postgres locally. That might actually be simpler than having two different database types.  
+I also need automated testing.  
+8:00 PM - Installing Postgres locally and ripping out all the SQLite code.
+8:55 PM - I should not have gone down the path of trying to run SQLite locally and Postgres on Render.
+9:25 PM - My local environment is stable and running on Postgres.
+9:35 PM - Troubleshooting db-init.py on Render. I need to remember to time-box future development sessions.  
+9:45 PM - That's a wrap. The Render server is up and running with new data, looks good on cell.  
+my Render Postgres DB is on the Free level, need to remember to upgrade it if it continues to work.  
+
 # January 13, 2026
 6:35 AM - Designing screens before work.
 
