@@ -5,6 +5,13 @@ title: "Lab notebook"
 # Introduction
 This is where I keep track of what I'm thinking and doing.
 
+# January 15, 2026
+4:05 AM - Obviously, this is not a sustainable rate of time spent on this project, but I'm awake and this is what I'm thinking about, so I might as well get to work.
+4:35 AM - Did some security hardening and minor tweaks to my pycharm UI.
+5:05 AM - Struggling to authenticate to an existing AWS account to set up email sending.
+5:45 AM - Created new AWS account and spent 40 minutes trying to figure out how to add new CNAME records to robertbryan.net.  
+
+
 # January 14, 2026
 4:30 PM - This is my list of things I want to work on in rough priority order:
 1. Web layout that looks good on cell - done
