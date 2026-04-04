@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="898dc429-cb3f-4ec2-8d76-85f6c859efb3" name="Changes" comment="adds article">
-      <change afterPath="$PROJECT_DIR$/docs/article-flow.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/2025-09-08-full.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/2025-09-12-pcov.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/2025-09-14-afrq.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/2025-09-14B-nkew.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/2025-09-14C-ctbl.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/2025-09-15-rnas.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/2025-09-15B-lrep.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/2025-09-19-sexl.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/2025-09-20-sgra.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/2025-09-21-prsm.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/article-process.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/post-template.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_drafts/solution_key.md" beforeDir="false" />
+    <list default="true" id="898dc429-cb3f-4ec2-8d76-85f6c859efb3" name="Changes" comment="overhaul and planning">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/redesign.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/redesign.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,14 +97,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752706947060</updated>
-    </task>
-    <task id="LOCAL-00199" summary="publishes article">
-      <option name="closed" value="true" />
-      <created>1757893339152</created>
-      <option name="number" value="00199" />
-      <option name="presentableId" value="LOCAL-00199" />
-      <option name="project" value="LOCAL" />
-      <updated>1757893339152</updated>
     </task>
     <task id="LOCAL-00200" summary="publishes article">
       <option name="closed" value="true" />
@@ -501,7 +482,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770495537039</updated>
     </task>
-    <option name="localTasksCounter" value="248" />
+    <task id="LOCAL-00248" summary="overhaul and planning">
+      <option name="closed" value="true" />
+      <created>1775336262894</created>
+      <option name="number" value="00248" />
+      <option name="presentableId" value="LOCAL-00248" />
+      <option name="project" value="LOCAL" />
+      <updated>1775336262894</updated>
+    </task>
+    <option name="localTasksCounter" value="249" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -522,7 +511,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="formatting and content updates&#10;restart numbering for lists experiment" />
     <MESSAGE value="tries double spaces for soft line breaks" />
     <MESSAGE value="removes liquid tag" />
     <MESSAGE value="replaces liquid tag" />
@@ -547,6 +535,7 @@
     <MESSAGE value="updates notebook" />
     <MESSAGE value="removes deprecated ebl content" />
     <MESSAGE value="adds article" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds article" />
+    <MESSAGE value="overhaul and planning" />
+    <option name="LAST_COMMIT_MESSAGE" value="overhaul and planning" />
   </component>
 </project>

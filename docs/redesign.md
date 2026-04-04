@@ -80,6 +80,70 @@ Add the features that make a publication feel alive and worth returning to.
 
 ---
 
+## Article Series
+
+### What a Series Is
+A named, ordered sequence of articles that together give a reader a complete understanding of a topic. Series complement topic pages: topic pages let readers wander by interest; series give readers a path when they want one.
+
+A reader who lands on a series gets:
+- A **series landing page**: title, description, full reading order with excerpts
+- **In-article navigation**: "Part 2 of 5 · Understanding EBL — next: How Stats Flow from the Ballpark →"
+- A **clear entry point** surfaced on the topic page: "New to EBL? Start here →"
+
+### Implementation in Jekyll (no plugins required)
+Add two fields to each post's front matter:
+```yaml
+series: "Understanding EBL"
+series_order: 2
+```
+A series index page uses Liquid to collect all posts sharing the same `series` value, sort by `series_order`, and display them in sequence. The post layout checks for a `series` field and renders prev/next navigation automatically.
+
+Series pages can be manually curated markdown pages or auto-generated from the tag. Either works on GitHub Pages without plugins.
+
+### Series vs. Standalone Articles
+Not every article belongs in a series. Series work best when:
+- There's a natural reading order (concept A must precede concept B)
+- A new reader needs context to appreciate later articles
+- The topic is broad enough that a single article can't do it justice
+
+Standalone articles work best for self-contained ideas that don't require prior reading.
+
+---
+
+### Proposed Series
+
+#### "Understanding EBL" — 5 articles
+A complete introduction to the Experimental Baseball League for a reader who has never heard of it. Each article is self-contained but builds on the previous one.
+
+| Order | Title (working) | Idea file |
+|---|---|---|
+| 1 | Why one team makes better competition | `ebl-one-team-constraint.md` |
+| 2 | The $100 auction budget problem | `ebl-auction-budget.md` |
+| 3 | The strange stats that actually win | `ebl-scoring-formula.md` |
+| 4 | From swing to screen: how live stats reach the app | `ebl-live-stats-pipeline.md` |
+| 5 | Your roster fixed itself overnight | `ebl-auto-roster.md` |
+
+**Series arc:** Starts with the "why" (the design philosophy), moves through strategy and rules (auction, scoring), then shows the technology underneath (live data, automation). A reader who finishes all five has a complete picture of what EBL is and why it's interesting.
+
+**Remaining EBL articles** (not in the series — standalone deep dives):
+- Eight people, one browser, zero lag (live auction real-time tech)
+- What happens when two people click at the same time (concurrency)
+- When a tie is worth more than a win (scoring edge cases)
+- How to test a whole baseball season in five minutes (simulation)
+- The jobs that run while everyone sleeps (cron jobs)
+
+---
+
+#### Other Series to Define Later
+These project areas have enough articles to support a series — define the reading order once the articles are drafted:
+
+- **"How Project Euler Works"** — euler project (brute force vs. insight, prime numbers, the site itself)
+- **"Your Digital Life Is More Fragile Than You Think"** — Dashlane + pussy-cat-blue cross-project series on digital preservation and security
+- **"Building a Fantasy Football League from Scratch"** — football project series
+- **"Writing Branching Stories"** — weft project series
+
+---
+
 ## Status
 In planning. Starting with tags and reader-experience improvements.
 
