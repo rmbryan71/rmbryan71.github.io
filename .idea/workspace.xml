@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="898dc429-cb3f-4ec2-8d76-85f6c859efb3" name="Changes" comment="overhaul and planning">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/redesign.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/redesign.md" afterDir="false" />
-    </list>
+    <list default="true" id="898dc429-cb3f-4ec2-8d76-85f6c859efb3" name="Changes" comment="documents plans" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +62,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "project.propVCSSupport.CommitDialog"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -97,14 +93,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752706947060</updated>
-    </task>
-    <task id="LOCAL-00200" summary="publishes article">
-      <option name="closed" value="true" />
-      <created>1757893415433</created>
-      <option name="number" value="00200" />
-      <option name="presentableId" value="LOCAL-00200" />
-      <option name="project" value="LOCAL" />
-      <updated>1757893415433</updated>
     </task>
     <task id="LOCAL-00201" summary="begins draft article">
       <option name="closed" value="true" />
@@ -490,7 +478,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775336262894</updated>
     </task>
-    <option name="localTasksCounter" value="249" />
+    <task id="LOCAL-00249" summary="documents plans">
+      <option name="closed" value="true" />
+      <created>1775341132714</created>
+      <option name="number" value="00249" />
+      <option name="presentableId" value="LOCAL-00249" />
+      <option name="project" value="LOCAL" />
+      <updated>1775341132715</updated>
+    </task>
+    <option name="localTasksCounter" value="250" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,7 +507,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="tries double spaces for soft line breaks" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="removes liquid tag" />
     <MESSAGE value="replaces liquid tag" />
     <MESSAGE value="uses dash for bullet lists" />
@@ -536,6 +532,7 @@
     <MESSAGE value="removes deprecated ebl content" />
     <MESSAGE value="adds article" />
     <MESSAGE value="overhaul and planning" />
-    <option name="LAST_COMMIT_MESSAGE" value="overhaul and planning" />
+    <MESSAGE value="documents plans" />
+    <option name="LAST_COMMIT_MESSAGE" value="documents plans" />
   </component>
 </project>
