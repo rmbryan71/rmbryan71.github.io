@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="898dc429-cb3f-4ec2-8d76-85f6c859efb3" name="Changes" comment="documents plans" />
+    <list default="true" id="898dc429-cb3f-4ec2-8d76-85f6c859efb3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,14 +95,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752706947060</updated>
-    </task>
-    <task id="LOCAL-00201" summary="begins draft article">
-      <option name="closed" value="true" />
-      <created>1757894967764</created>
-      <option name="number" value="00201" />
-      <option name="presentableId" value="LOCAL-00201" />
-      <option name="project" value="LOCAL" />
-      <updated>1757894967764</updated>
     </task>
     <task id="LOCAL-00202" summary="begins draft article">
       <option name="closed" value="true" />
@@ -486,7 +480,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775341132715</updated>
     </task>
-    <option name="localTasksCounter" value="250" />
+    <task id="LOCAL-00250" summary="clears commit messages">
+      <option name="closed" value="true" />
+      <created>1775341190639</created>
+      <option name="number" value="00250" />
+      <option name="presentableId" value="LOCAL-00250" />
+      <option name="project" value="LOCAL" />
+      <updated>1775341190640</updated>
+    </task>
+    <option name="localTasksCounter" value="251" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +510,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="removes liquid tag" />
     <MESSAGE value="replaces liquid tag" />
     <MESSAGE value="uses dash for bullet lists" />
     <MESSAGE value="formatting experiment" />
@@ -533,6 +534,7 @@
     <MESSAGE value="adds article" />
     <MESSAGE value="overhaul and planning" />
     <MESSAGE value="documents plans" />
-    <option name="LAST_COMMIT_MESSAGE" value="documents plans" />
+    <MESSAGE value="clears commit messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="clears commit messages" />
   </component>
 </project>
