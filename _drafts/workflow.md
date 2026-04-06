@@ -6,7 +6,7 @@ kanban-plugin: board
 
 ## Warming Up
 
-- [ ] [about-me](about-me.md)
+- [ ] [About Me](About%20Me.md)
 - [ ] [AI Position Statement](AI%20Position%20Statement.md)
 
 

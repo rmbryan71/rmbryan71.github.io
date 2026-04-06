@@ -1,9 +1,8 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
 ---
-![dna-1811955_1920.jpg](assets/dna-1811955_1920.jpg)
-
-A blog about technical writing, bioinformatics, [baseball](https://ebl-k2sj.onrender.com/), and Python.
+Works in progress:
+- [[technical writing]]
+- bioinformatics
+- [baseball](https://ebl-k2sj.onrender.com/)
+- python
