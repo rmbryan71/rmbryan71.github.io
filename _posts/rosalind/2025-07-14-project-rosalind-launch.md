@@ -11,7 +11,7 @@ Hi, I'm Rob. I'm a [technical writer](https://www.linkedin.com/in/rmbryan/) in t
 For each problem in Project Rosalind, I'll post about the key points on my path to a solution as well as the bioinformatics and Python concepts I learn along the way.
 
 # Rosalind Franklin
-![rosalind-franklin.jpg](../assets/rosalind-franklin.jpg)
+![rosalind-franklin.jpg](rosalind-franklin.jpg)
 
 Project Rosalind is named after Rosalind Franklin who, despite only living to the age of 37, lived an [absolutely fascinating life](https://en.wikipedia.org/wiki/Rosalind_Franklin), 
 and was instrumental in our understanding of the molecular structures of DNA.
