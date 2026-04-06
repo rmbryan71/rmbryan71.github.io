@@ -6,6 +6,90 @@
   <component name="ChangeListManager">
     <list default="true" id="898dc429-cb3f-4ec2-8d76-85f6c859efb3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLAUDE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_drafts/CLAUDE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/CLAUDE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/Untitled Kanban.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/auction-dynamics.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/cardgame-auction-meets-battle.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/cardgame-describing-a-game-state.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/cardgame-game-balance.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/cardgame-hidden-information.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/cardgame-live-web-game.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/cardgame-pressure-cooker-trap.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/cardgame-teaching-ai-to-play.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/cartalk-collecting-as-care.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/cartalk-content-distribution.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/cartalk-digital-preservation.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/cartalk-how-big-is-audio.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/cartalk-metadata-matters.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/cartalk-nostalgia-and-radio.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/cartalk-podcasting-history.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/dashlane-account-explosion.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/dashlane-breach-cascade.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/dashlane-encrypted-vault.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/dashlane-one-password-paradox.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/dashlane-recovery-codes.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/dashlane-secrets-we-store.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/dashlane-what-hackers-want.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/ebl-auction-budget.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/ebl-auto-roster.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/ebl-concurrent-bidding.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/ebl-cron-jobs.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/ebl-live-auction-realtime.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/ebl-live-stats-pipeline.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/ebl-one-team-constraint.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/ebl-scoring-formula.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/ebl-series-understanding-ebl.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/ebl-simulation-testing.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/ebl-tie-scoring-chaos.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/euler-brute-force-vs-insight.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/euler-how-many-ways.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/euler-numbers-with-loops.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/euler-overnight-to-seconds.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/euler-prime-numbers.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/euler-project-itself.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/euler-solving-sudoku.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/football-broken-fantasy.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/football-calibration.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/football-defensive-stats.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/football-dual-scoring.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/football-eagles-constraint.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/football-real-time-data.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/football-snap-counts.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/pcb-acoustic-recording.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/pcb-bit-perfect-ripping.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/pcb-cd-degradation.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/pcb-format-obsolescence.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/pcb-indie-music-preservation.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/pcb-lossless-vs-lossy.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/pcb-why-we-preserve.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/rosalind-biology-you-need.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/rosalind-difficulty-cliff.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/rosalind-pattern-across-problems.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/rosalind-solving-twice.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/rosalind-when-to-look.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/rosalind-why-stop.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/rosalind-writing-to-learn.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/weft-branching-stories.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/weft-constraint-as-craft.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/weft-dead-ends.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/weft-interactive-fiction-beyond-games.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/weft-path-explosion.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/weft-reading-as-data.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/weft-stories-as-graphs.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/writingteam-ai-writing-assistant.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/writingteam-brief-to-draft.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/writingteam-editing-roles.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/writingteam-pattern-not-phrase.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/writingteam-repurposing-content.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/writingteam-voice-across-formats.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_ideas/writingteam-voice-has-physics.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_outlines/CLAUDE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/box.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/article-flow.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/redesign.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,11 +158,11 @@
       <recent name="$PROJECT_DIR$/drafts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_ideas" />
       <recent name="$PROJECT_DIR$/docs" />
       <recent name="$PROJECT_DIR$/withdrawn" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/_posts" />
-      <recent name="$PROJECT_DIR$/assets" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -95,14 +179,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752706947060</updated>
-    </task>
-    <task id="LOCAL-00202" summary="begins draft article">
-      <option name="closed" value="true" />
-      <created>1757895542001</created>
-      <option name="number" value="00202" />
-      <option name="presentableId" value="LOCAL-00202" />
-      <option name="project" value="LOCAL" />
-      <updated>1757895542001</updated>
     </task>
     <task id="LOCAL-00203" summary="begins draft article">
       <option name="closed" value="true" />
@@ -488,7 +564,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775341190640</updated>
     </task>
-    <option name="localTasksCounter" value="251" />
+    <task id="LOCAL-00251" summary="adds Kanban">
+      <option name="closed" value="true" />
+      <created>1775382549194</created>
+      <option name="number" value="00251" />
+      <option name="presentableId" value="LOCAL-00251" />
+      <option name="project" value="LOCAL" />
+      <updated>1775382549194</updated>
+    </task>
+    <option name="localTasksCounter" value="252" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +594,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="replaces liquid tag" />
     <MESSAGE value="uses dash for bullet lists" />
     <MESSAGE value="formatting experiment" />
     <MESSAGE value="numbered list restart experiment" />
@@ -535,6 +618,7 @@
     <MESSAGE value="overhaul and planning" />
     <MESSAGE value="documents plans" />
     <MESSAGE value="clears commit messages" />
-    <option name="LAST_COMMIT_MESSAGE" value="clears commit messages" />
+    <MESSAGE value="adds Kanban" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds Kanban" />
   </component>
 </project>
