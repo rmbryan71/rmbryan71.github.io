@@ -10,10 +10,19 @@ kanban-plugin: board
 - [ ] [AI Position Statement](AI%20Position%20Statement.md)
 
 
+## In Progress
+
+
+
+## Published
+
+- [ ] [Ground Rules](Ground%20Rules.md)
+
+
 
 
 %% kanban:settings
 ```
-{"kanban-plugin":"board","list-collapse":[false]}
+{"kanban-plugin":"board","list-collapse":[false,false,false]}
 ```
 %%
