@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ground rules
-date: 2026-04-07
+date: 2026-04-06
 categories:
 excerpt:
 tags:
