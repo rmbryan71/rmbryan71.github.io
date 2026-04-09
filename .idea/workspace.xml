@@ -94,14 +94,6 @@
       <option name="presentableId" value="Default" />
       <updated>1752706947060</updated>
     </task>
-    <task id="LOCAL-00205" summary="edits draft article">
-      <option name="closed" value="true" />
-      <created>1757933142767</created>
-      <option name="number" value="00205" />
-      <option name="presentableId" value="LOCAL-00205" />
-      <option name="project" value="LOCAL" />
-      <updated>1757933142767</updated>
-    </task>
     <task id="LOCAL-00206" summary="edits draft article">
       <option name="closed" value="true" />
       <created>1757976140936</created>
@@ -486,7 +478,15 @@
       <option name="project" value="LOCAL" />
       <updated>1775625048692</updated>
     </task>
-    <option name="localTasksCounter" value="254" />
+    <task id="LOCAL-00254" summary="removes footer and renames site">
+      <option name="closed" value="true" />
+      <created>1775625670184</created>
+      <option name="number" value="00254" />
+      <option name="presentableId" value="LOCAL-00254" />
+      <option name="project" value="LOCAL" />
+      <updated>1775625670185</updated>
+    </task>
+    <option name="localTasksCounter" value="255" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,7 +508,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="numbered list restart experiment" />
     <MESSAGE value="deletes pdfs, adds lab notebook" />
     <MESSAGE value="removes lab notebook page title" />
     <MESSAGE value="removes page titles" />
@@ -533,6 +532,7 @@
     <MESSAGE value="adds Kanban" />
     <MESSAGE value="cleans out trash" />
     <MESSAGE value="adds ground rules" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds ground rules" />
+    <MESSAGE value="removes footer and renames site" />
+    <option name="LAST_COMMIT_MESSAGE" value="removes footer and renames site" />
   </component>
 </project>
