@@ -1,0 +1,1 @@
+{% include vocab.html word="WORD" definition="DEFINITION" %}

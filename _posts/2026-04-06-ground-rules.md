@@ -16,3 +16,4 @@ tags:
 7. Notes to self help others.
 8. Anonymity of everyone else.
 <!--break-->
+{% include vocab.html word="craft" definition="An occupation or trade requiring manual dexterity or skilled artistry." %}
