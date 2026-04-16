@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="898dc429-cb3f-4ec2-8d76-85f6c859efb3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="898dc429-cb3f-4ec2-8d76-85f6c859efb3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,14 +93,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752706947060</updated>
-    </task>
-    <task id="LOCAL-00208" summary="draft article">
-      <option name="closed" value="true" />
-      <created>1758323748404</created>
-      <option name="number" value="00208" />
-      <option name="presentableId" value="LOCAL-00208" />
-      <option name="project" value="LOCAL" />
-      <updated>1758323748404</updated>
     </task>
     <task id="LOCAL-00209" summary="draft article">
       <option name="closed" value="true" />
@@ -488,7 +478,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776302085068</updated>
     </task>
-    <option name="localTasksCounter" value="257" />
+    <task id="LOCAL-00257" summary="completes task">
+      <option name="closed" value="true" />
+      <created>1776302625701</created>
+      <option name="number" value="00257" />
+      <option name="presentableId" value="LOCAL-00257" />
+      <option name="project" value="LOCAL" />
+      <updated>1776302625701</updated>
+    </task>
+    <option name="localTasksCounter" value="258" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +508,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="removes page titles" />
     <MESSAGE value="adds page title to lab notebook" />
     <MESSAGE value="adds local layout file so that I can customize it" />
     <MESSAGE value="header page experiment" />
@@ -535,6 +532,7 @@
     <MESSAGE value="removes footer and renames site" />
     <MESSAGE value="removes site name" />
     <MESSAGE value="changes css" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes css" />
+    <MESSAGE value="completes task" />
+    <option name="LAST_COMMIT_MESSAGE" value="completes task" />
   </component>
 </project>
