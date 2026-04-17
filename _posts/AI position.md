@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Position on AI
-date:
+title: AI position
+date: 2026-04-03
 categories:
 excerpt:
 tags:
@@ -10,7 +10,6 @@ tags:
 ---
 My specific choices 
 <!--break-->
-<!-- Add the concept of craft before publishing -->
 I can write my own SQL statements, but that's not why I'm here.
 When I ask AI to write a SQL statement for me, it does a better job than I could do in a fraction of the time, so that's a benefit to me. I miss out on the opportunity to learn how to write better SQL queries, but I'm okay with that.
 Writing text for people, that's my thing. That's why I'm here. I can ask AI to do that for me, and it does a fine job, but I'm not willing to trade away the learning opportunity there, so I choose to defend a hard boundary that no AI gets involved in my writing.
@@ -19,4 +18,10 @@ I tried all that. I had a project to train an AI agent on all of my old writing,
 At that moment, I asked, "Well, what's the point of that?"
 People might find that content interesting.
 They might learn something from it.
-But, for me, I decided that keeping the work of writing to myself ... something about craft.
+
+But, for me, I decided that keeping the work of writing to myself because writing by hand helps me:
+* clarify my thinking
+* expose my own cognitive distortions
+* keep a record of past thoughts
+* assess my own work critically
+* slow down and consider alternatives
