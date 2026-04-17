@@ -26,6 +26,17 @@ url: https://www.robertbryan.net
 github_username:  rmbryan71
 permalink: /:collection/:name:output_ext
 
+collections:
+  articles:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: post
+
 # Show excerpts for blog posts
 show_excerpts: true
 excerpt_separator: "<!--break-->"
@@ -35,8 +46,8 @@ future: false
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
 header_pages:
-  - _posts/About this site.md
-  - _posts/About Me.md
+  - _articles/About this site.md
+  - _articles/About Me.md
 
 # Build settings
 markdown: kramdown

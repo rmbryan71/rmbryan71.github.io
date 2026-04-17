@@ -1,7 +1,6 @@
 ---
 layout: post
-title:
-date:
+title: Concepts
 categories:
 excerpt:
 ---

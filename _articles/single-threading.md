@@ -1,7 +1,6 @@
 ---
 layout: post
-title:
-date:
+title: Single-Threading
 categories:
 excerpt:
 ---
