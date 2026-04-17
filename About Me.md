@@ -6,7 +6,7 @@ tags: meta
 I resonate with these concepts:
 * secular-humanism
 * curiosity
-* [single-threading](single-threading.md)
+* [single-threading](_articles/single-threading.md)
 * quakerism
 * resilience
 * persistence

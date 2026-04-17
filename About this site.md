@@ -12,7 +12,7 @@ What is robertbryan.net?
 This is an experiment in making my ongoing experiments, drafts, and reflections public.
 
 These are my writing guidelines for this project:
-1. No [AI involvement](AI%20position.md).
+1. No [AI involvement](_articles/AI%20position.md).
 2. Focus on concepts, process, and discovery.
 3. Consider the non-technical audience.
 4. Explore what's interesting to me.
