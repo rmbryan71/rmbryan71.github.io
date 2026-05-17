@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Single-Threading
-categories:
+categories: meta
 excerpt:
 ---
 

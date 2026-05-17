@@ -13,3 +13,4 @@ My working definition of a concept is: a unit of meaning that's separate from sp
 * Stability
 * Connectivity
 * Concepts evolve
+

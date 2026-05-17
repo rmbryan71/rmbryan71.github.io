@@ -7,12 +7,12 @@ excerpt:
 tags:
   - meta
 ---
-What is robertbryan.net?
+What is robertbryan.net about?
 <!--break-->
 This is an experiment in making my ongoing experiments, drafts, and reflections public.
 
 These are my writing guidelines for this project:
-1. No [AI involvement](/articles/AI%20position.html).
+1. No AI involved in writing at all.
 2. Focus on concepts, process, and discovery.
 3. Consider the non-technical audience.
 4. Explore what's interesting to me.
