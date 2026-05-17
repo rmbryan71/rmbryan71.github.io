@@ -3,11 +3,9 @@ layout: post
 title: My Decisions on AI
 date: 2026-05-17
 categories: meta
-excerpt: where does this show up?
+excerpt: Is AI a tool?
 tags:
   - AI
   - meta
 ---
-I think this is what displays on the home page?
-<!--break-->
-I need to rethink AI, so I'm working on that.
+I am in the process of writing about my relationship to AI.
