@@ -4,6 +4,7 @@ title: A Signal from Romania
 date: 2026-05-18
 categories: radio, shortwave, QSL
 excerpt: Shortwave Audio Received
+permalink: /articles/a-signal-from-romania/
 ---
 File:                 31m_9.730MHz_20260517_214954.wav  
 Band:                 31m  
