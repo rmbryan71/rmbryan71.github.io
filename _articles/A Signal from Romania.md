@@ -6,7 +6,7 @@ categories: radio, shortwave, QSL
 excerpt: Shortwave Audio Received
 permalink: /articles/a-signal-from-romania/
 ---
-File:                 31m_9.730MHz_20260517_214954.wav  
+File:                 31m_9.730MHz_20260517_214954
 Band:                 31m  
 Frequency:            9.730MHz  
 Date:                 2026-05-17  
@@ -18,7 +18,13 @@ Model:                large
 Word Count:           122  
 Transcription Time:   5.7s  
   
-![](31m_9.730MHz_20260517_214954.wav)
+This recording was made at 28.3° N, 80.7° W using an Airspy HF+ Discovery and a single passive loop antenna with a homemade demodulator running on recycled hardware.
+
+<audio controls>
+  <source src="/assets/31m_9.730MHz_20260517_214954.mp3" type="audio/mpeg">
+</audio>
+
+Transcript:
 
 diasporent din Europa. Instituția noastră a început să spozizioneze evenimentele ca niște evenimente anuale așteptate, ca niște puncte fixe într-o agenda culturală a comunității românești din diaspora și din țară. Faptul că noi am cunostrat acest tip de constantă a fost vital, pentru că într-un univers fragmentat al culturii din diaspora, o cultură din diaspora unde oamenii nu întotdeauna trebuie să recunoaștem nou, întotdeauna acest direct la instituții, la biblioteci. Oamenii scoate scriserele și identitatea culturală, mai mult prin ritualuri colective și prin evenimente fixe, decât prin prezentă fizică la centre culturale. Și noi am lucrat la cumplirea unui calendar mental care se înformeze în media publicului nostru și care se numără asistivă și identitară. Să spunem, fiecare sfârșit de moarte, fiecare  
   
