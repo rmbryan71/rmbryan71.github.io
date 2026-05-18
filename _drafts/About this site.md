@@ -9,7 +9,7 @@ tags:
 ---
 What is robertbryan.net about?
 <!--break-->
-This is an experiment in making my ongoing experiments, drafts, and reflections public.
+This is an experiment in making a subset of my ongoing work, drafts, and reflections public.
 
 These are my writing guidelines for this project:
 1. No AI involved in writing at all.
