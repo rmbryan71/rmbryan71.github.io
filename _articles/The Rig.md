@@ -5,7 +5,7 @@ date: 2026-05-20
 categories: dsp, hardware
 excerpt: Current tooling
 ---
-This is the gear I use to study [digital signal processing](/articles/digital-signal-processing.htm):
+This is the gear I use to study [digital signal processing](https://www.robertbryan.net/articles/digital%20signal%20processing.html):
 1. [YouLoop single-loop passive magnetic loop antenna](https://www.rtl-sdr.com/product/youloop-portable-passive-magnetic-loop-antenna/)
 2. [Airspy HF+ Discovery HF/VHF receiver](https://airspy.com/airspy-hf-discovery/)
 3. A standard-issue MacBook Pro from 2019
