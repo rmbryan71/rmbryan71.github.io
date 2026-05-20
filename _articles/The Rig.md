@@ -10,8 +10,8 @@ This is the gear I use to study [[digital signal processing]]:
 2. [Airspy HF+ Discovery HF/VHF receiver](https://airspy.com/airspy-hf-discovery/)
 3. A standard-issue MacBook Pro from 2019
 4. A standard-issue WiFi router from 2017
-5. Machine-zero
-# Machine zero
+5. Machine-zero, which is:
+
 **Chassis**:  Dell Precision 3630 tower bought used on eBay from e-CyclePro in Lecanto, FL.
 
 **Motherboard**
@@ -26,13 +26,16 @@ This is the gear I use to study [[digital signal processing]]:
 - 6 cores / 12 threads
 - 3.70 GHz
 
-| ![Dirty CPU](/assets/dirty-cpu.png) | ![Clean CPU](/assets/clean-cpu.png) |
-| --------------------------- | -------------------------------- |
+<div style="display: flex; gap: 10px;"> 
+<img src="/assets/dirty-cpu.png" alt="A dirty cpu" style="width: 50%;"> 
+<img src="/assets/clean-cpu.png" alt="A clean cpu" style="width: 50%;"> 
+</div>
+
 **RAM** _(stock, not replaced)_
 - 32GB DDR4 2666MT/s dual channel
 - 2× 16GB Micron Technology 16ATF2G64AZ-2G6E1
 - Confirmed by memtest86
-![](/assets/pass-memtest.png)
+![Memtest86 pass screen](/assets/pass-memtest.png)
 
 **PSU** _(replaced — stock Dell 300W wasn't big enough for the GPU)_
 - Seasonic CORE GX 650W ATX 3.1, 80+ Gold, Fully Modular
@@ -46,4 +49,4 @@ This is the gear I use to study [[digital signal processing]]:
 - 12GB GDDR6 / 12288 MiB
 - Dual fan (Torx 3.0)
 - Stress test: PASS — gpu-burn 15 min, 0 errors, max temp 78°C, ~9,211 Gflop/s
-![](/assets/gpu.jpeg)
+![GPU installed in the chassis](/assets/gpu.jpeg)
