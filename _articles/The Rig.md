@@ -19,20 +19,20 @@ This is the gear I use to study [[digital signal processing]]:
 - Socket: LGA1151 (8th/9th gen Intel)
 - Chipset: Intel C246 (workstation)
 - RAM slots: 4× DDR4 DIMM
-![](mobo.jpeg)
+![The motherboard](/assets/mobo.jpeg)
 
 **CPU** _(stock, although I did remove the fan, clean the heat-sink and apply fresh thermal paste)_
 - Intel Core i7-8700K
 - 6 cores / 12 threads
 - 3.70 GHz
 
-| ![Dirty CPU](dirty-cpu.png) | ![Clean CPU\|253](clean-cpu.png) |
+| ![Dirty CPU](/assets/dirty-cpu.png) | ![Clean CPU](/assets/clean-cpu.png) |
 | --------------------------- | -------------------------------- |
 **RAM** _(stock, not replaced)_
 - 32GB DDR4 2666MT/s dual channel
 - 2× 16GB Micron Technology 16ATF2G64AZ-2G6E1
 - Confirmed by memtest86
-![](pass-memtest.png)
+![](/assets/pass-memtest.png)
 
 **PSU** _(replaced — stock Dell 300W wasn't big enough for the GPU)_
 - Seasonic CORE GX 650W ATX 3.1, 80+ Gold, Fully Modular
@@ -46,4 +46,4 @@ This is the gear I use to study [[digital signal processing]]:
 - 12GB GDDR6 / 12288 MiB
 - Dual fan (Torx 3.0)
 - Stress test: PASS — gpu-burn 15 min, 0 errors, max temp 78°C, ~9,211 Gflop/s
-![](gpu.jpeg)
+![](/assets/gpu.jpeg)
