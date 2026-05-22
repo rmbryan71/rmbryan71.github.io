@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Curious Enough</title>
+<link>https://robertbryan.net/</link>
+<atom:link href="https://robertbryan.net/index.xml" rel="self" type="application/rss+xml"/>
+<description>Curious Enough</description>
+<generator>quarto-1.9.37</generator>
+<lastBuildDate>Mon, 18 May 2026 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Digital Signal Processing</title>
+  <dc:creator>Rob Bryan</dc:creator>
+  <link>https://robertbryan.net/posts/dsp/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Digital signal processing (DSP) is the study of analyzing, modifying, and synthesizing signals, where signals are <em>any</em> observable change in a quantity over space or time.</p>
+<p>Signals do not have to carry information, but they can, and DSP is way more fun when they do.</p>
+<p>These are my primary DSP resources:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Digital_signal_processing">Wikipedia : Digital signal processing</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Signal">Wikipedia : Signal</a></li>
+<li><a href="http://greenteapress.com/thinkdsp/thinkdsp.pdf">Think DSP</a> by Allen Downey</li>
+<li><a href="https://dspfirst.gatech.edu/">DSP First 2e</a> from Georgia Tech</li>
+<li><a href="https://jackschaedler.github.io/">https://jackschaedler.github.io/</a></li>
+<li><a href="https://dspguide.com/">The Scientist and Engineer’s Guide to Digital Signal Processing</a> by Steven Smith</li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/signal.html">Signal Processing with SciPy</a></li>
+<li><a href="https://markusgritsch.github.io/toc.html">Understanding Digital Signal Processing</a> by Richard Lyons</li>
+</ul>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://robertbryan.net/posts/dsp/signal-spectrogram.png" class="img-fluid figure-img"></p>
+<figcaption>A spectrogram of the audio signal received at 7.335 MHz on 2026-05-17</figcaption>
+</figure>
+</div>
+
+
+
+ ]]></description>
+  <category>dsp</category>
+  <category>meta</category>
+  <category>resources</category>
+  <guid>https://robertbryan.net/posts/dsp/</guid>
+  <pubDate>Mon, 18 May 2026 04:00:00 GMT</pubDate>
+  <media:content url="https://robertbryan.net/posts/dsp/signal-spectrogram.png" medium="image" type="image/png" height="63" width="144"/>
+</item>
+</channel>
+</rss>

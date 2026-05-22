@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "My intentions here:\n\nAim for first-class work as it’s defined by Richard Hamming in You and Your Research.\nWrite specific details about what I’ve done with examples, screenshots, code, and results.\nUse plain language, and be clear about technical terms when they’re necessary.\nInclude mistakes, failures, and detours as important parts of the process.\nHave fun."
+  },
+  {
+    "objectID": "posts/dsp/index.html",
+    "href": "posts/dsp/index.html",
+    "title": "Digital Signal Processing",
+    "section": "",
+    "text": "Digital signal processing (DSP) is the study of analyzing, modifying, and synthesizing signals, where signals are any observable change in a quantity over space or time.\nSignals do not have to carry information, but they can, and DSP is way more fun when they do.\nThese are my primary DSP resources:\n\nWikipedia : Digital signal processing\nWikipedia : Signal\nThink DSP by Allen Downey\nDSP First 2e from Georgia Tech\nhttps://jackschaedler.github.io/\nThe Scientist and Engineer’s Guide to Digital Signal Processing by Steven Smith\nSignal Processing with SciPy\nUnderstanding Digital Signal Processing by Richard Lyons\n\n\n\n\n\nA spectrogram of the audio signal received at 7.335 MHz on 2026-05-17"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Curious Enough",
+    "section": "",
+    "text": "Digital Signal Processing\n\n\n\ndsp\n\nmeta\n\nresources\n\n\n\n\n\n\n\n\n\nMay 18, 2026\n\n\nRob Bryan\n\n\n\n\n\nNo matching items"
+  }
+]
