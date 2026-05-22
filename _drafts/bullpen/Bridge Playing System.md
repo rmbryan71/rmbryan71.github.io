@@ -1,1 +1,0 @@
-Explore hand records from posted tournaments, look for interesting situations

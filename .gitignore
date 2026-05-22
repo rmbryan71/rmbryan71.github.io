@@ -1,11 +1,12 @@
-_site
-.sass-cache
-.claude/worktrees/
-.jekyll-cache
-.jekyll-metadata
-vendor
-.iml
-.obsidian
+# Ignore everything
+/*
 
-/.idea/workspace.xml
-/.idea/workspace.xml
+# Allow the rendered site output only
+!/docs
+!/docs/**
+
+# Allow root-level files GitHub Pages needs
+!.gitignore
+!.nojekyll
+!README.md
+!CNAME
