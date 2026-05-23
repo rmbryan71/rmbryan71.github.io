@@ -8,7 +8,7 @@
 <title>Curious Enough</title>
 <link>https://robertbryan.net/</link>
 <atom:link href="https://robertbryan.net/index.xml" rel="self" type="application/rss+xml"/>
-<description>Curious Enough</description>
+<description></description>
 <generator>quarto-1.9.37</generator>
 <lastBuildDate>Mon, 18 May 2026 04:00:00 GMT</lastBuildDate>
 <item>
@@ -50,7 +50,6 @@
   <category>resources</category>
   <guid>https://robertbryan.net/posts/dsp/</guid>
   <pubDate>Mon, 18 May 2026 04:00:00 GMT</pubDate>
-  <media:content url="https://robertbryan.net/posts/dsp/signal-spectrogram.png" medium="image" type="image/png" height="63" width="144"/>
 </item>
 </channel>
 </rss>
