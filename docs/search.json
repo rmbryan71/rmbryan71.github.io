@@ -18,7 +18,7 @@
     "href": "posts/FT8-launch/index.html",
     "title": "FT8 Launch",
     "section": "",
-    "text": "Confession\nI worked on Digital Signal Processing for almost 6 weeks without learning that FT8 exists.\n\n\nChallenge\nI’m going to try to write my own FT8 demodulator in 30 days with: - AI in strict socratic mode - Posts of status by 7:00 AM (EDT) on Monday, Thursday, and Saturday.\nMy solution won’t rely on any part of the working FT8 demodulator in WSJT-X.\nThere’s at least one public python solution. I’ve seen it. I won’t look at it again during the challenge. If I find any others, I’ll avert my eyes immediately.\nI’ll make a 20-minute reference recording of audio on the main JT8 frequency, 14.074 MHz and demodulate that with WSJT-X. Then, I’ll demodulate the same audio with my code and compare the results."
+    "text": "Confession\nI worked on Digital Signal Processing for almost 6 weeks without learning that FT8 exists.\n\n\nChallenge\nI’m going to try to write my own FT8 demodulator in 30 days with:\n\nAI in strict socratic mode\nPosts of status by 7:00 AM (EDT) on Monday, Thursday, and Saturday.\n\nMy solution won’t rely on any part of the working FT8 demodulator in WSJT-X.\nThere’s at least one public python solution. I’ve seen it. I won’t look at it again during the challenge.\n\n\n\n\n\n\nNote\n\n\n\nIf I find any other solutions, I’ll avert my eyes immediately.\n\n\n\n\nWhat does success look like?\nAt the outset, I’ll make a 20-minute reference recording of audio on the main JT8 frequency, 14.074 MHz and demodulate that with WSJT-X.\nTo assess my progress, I’ll demodulate the same audio with my code and compare the results."
   },
   {
     "objectID": "index.html",
