@@ -14,10 +14,17 @@
     "text": "Digital signal processing (DSP) is the study of analyzing, modifying, and synthesizing signals, where signals are any observable change in a quantity over space or time.\nSignals do not have to carry information, but they can, and DSP is way more fun when they do.\nThese are my primary DSP resources:\n\nWikipedia : Digital signal processing\nWikipedia : Signal\nThink DSP by Allen Downey\nDSP First 2e from Georgia Tech\nhttps://jackschaedler.github.io/\nThe Scientist and Engineer’s Guide to Digital Signal Processing by Steven Smith\nSignal Processing with SciPy\nUnderstanding Digital Signal Processing by Richard Lyons\n\n\n\n\n\nA spectrogram of the audio signal received at 7.335 MHz on 2026-05-17"
   },
   {
+    "objectID": "posts/FT8-launch/index.html",
+    "href": "posts/FT8-launch/index.html",
+    "title": "FT8 Launch",
+    "section": "",
+    "text": "Confession\nI worked on Digital Signal Processing for almost 6 weeks without learning that FT8 exists.\n\n\nChallenge\nI’m going to try to write my own FT8 demodulator in 30 days with: - AI in strict socratic mode - Posts of status by 7:00 AM (EDT) on Monday, Thursday, and Saturday.\nMy solution won’t rely on any part of the working FT8 demodulator in WSJT-X.\nThere’s at least one public python solution. I’ve seen it. I won’t look at it again during the challenge. If I find any others, I’ll avert my eyes immediately.\nI’ll make a 20-minute reference recording of audio on the main JT8 frequency, 14.074 MHz and demodulate that with WSJT-X. Then, I’ll demodulate the same audio with my code and compare the results."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Curious Enough",
     "section": "",
-    "text": "Digital Signal Processing\n\n\n\ndsp\n\nmeta\n\nresources\n\n\n\n\n\n\n\n\n\nMay 18, 2026\n\n\nRob Bryan\n\n\n\n\n\nNo matching items"
+    "text": "FT8 Launch\n\n\n\nFT8\n\ndsp\n\npython\n\n\n\n\n\n\n\n\n\nJun 8, 2026\n\n\nRob Bryan\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Signal Processing\n\n\n\ndsp\n\nmeta\n\nresources\n\n\n\n\n\n\n\n\n\nMay 18, 2026\n\n\nRob Bryan\n\n\n\n\n\nNo matching items"
   }
 ]
