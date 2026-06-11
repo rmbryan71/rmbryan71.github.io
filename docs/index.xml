@@ -23,7 +23,7 @@
 
 <section id="strict-socratic-mode" class="level1">
 <h1>Strict Socratic mode</h1>
-<p>To begin, I used <a href="../../posts/FT8-1/socratic.html">these stock instructions</a> to put my LLM tool into a mode where it would not write any code or solve any problems, but instead only ask questions to help guide me toward sorting things out myself.</p>
+<p>To begin, I used a stock set of instructions to put my LLM tool into a mode where it would not write any code or solve any problems, but instead only ask questions to help guide me toward sorting things out myself.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -481,7 +481,7 @@ Note
 
  ]]></description>
   <guid>https://robertbryan.net/posts/FT8-1/socratic.html</guid>
-  <pubDate>Thu, 11 Jun 2026 10:29:16 GMT</pubDate>
+  <pubDate>Thu, 11 Jun 2026 10:34:36 GMT</pubDate>
 </item>
 </channel>
 </rss>
