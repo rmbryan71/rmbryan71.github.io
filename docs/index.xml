@@ -10,7 +10,310 @@
 <atom:link href="https://robertbryan.net/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Mon, 08 Jun 2026 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 11 Jun 2026 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>FT8 First Steps</title>
+  <dc:creator>Rob Bryan</dc:creator>
+  <link>https://robertbryan.net/posts/FT8-1/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="strict-socratic-mode" class="level1">
+<h1>Strict Socratic mode</h1>
+<p>To begin, I used <a href="../../posts/FT8-1/socratic.html">these stock instructions</a> to put my LLM tool into a mode where it would not write any code or solve any problems, but instead only ask questions to help guide me toward sorting things out myself.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Observation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Socratic mode has been a perfect fit for this learning project so far.<br>
+I’m still comfortable with my complete ban on all LLM involvement in text writing, and Socratic mode gives me the same clarity with coding.</p>
+</div>
+</div>
+</section>
+<section id="reference-recording" class="level1">
+<h1>Reference recording</h1>
+<p>My test to determine how well my <a href="https://en.wikipedia.org/wiki/FT8">FT8</a> decoder works will be to use my decoder on a reference recording, then compare my results to the results from the JT9 binary utility multi-mode decoder written with the help of <a href="https://en.wikipedia.org/wiki/Joseph_Hooton_Taylor_Jr.">Joseph Hooton Taylor Jr.</a>, co-creator of the FT8 protocol.</p>
+<p>From previous work, I have a record.py program that I used to make the reference recording with this command:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">python3</span> record.py 14.074 usb <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--duration</span> 20 <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--output</span> ft8-challenge-reference.wav</span></code></pre></div></div>
+<p>These arguments specify that the recorder should:</p>
+<ol type="1">
+<li>capture on frequency 14.074 MHz, which is a standard for FT8 transmissions</li>
+<li>use upper side band (usb) demodulation</li>
+<li>record 20 minutes of audio</li>
+<li>save the results in a file with a specific name</li>
+</ol>
+<p>This worked as designed.<br>
+I’ve put a short sample of the recording here if you’re interested in hearing what a raw FT8 transmission sounds like.</p>
+<audio controls="">
+  <source src="sample.wav" type="audio/wav">
+</audio>
+<p>Set your system volume on high and your personal expectations on <strong>low</strong>.<br>
+Like, super-low.<br>
+It’s mostly static with a faint, high-pitched whine in the background.</p>
+</section>
+<section id="decoding-the-reference" class="level1">
+<h1>Decoding the reference</h1>
+<p>WSJT-X and JT9 are built to decode live audio at 12 MHz, not recordings at 40 Mhz.<br>
+So first, I used the <a href="https://en.wikipedia.org/wiki/SoX">sox</a> utility to convert the sample rate with:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sox</span> ft8-challenge-reference.wav <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-r</span> 12000 ft8-challenge-reference-2.wav</span></code></pre></div></div>
+<p>Then, in order to get JT9 to decode the 20-minutes of audio, I wrote this little script to chop the reference recording into pieces and decode each piece:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">for</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">((</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">i</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">;</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">i</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1185</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">;</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">i</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">15</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">));</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">do</span></span>
+<span id="cb3-2">  <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">echo</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"begin </span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">$i</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> to </span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">$((i</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">18</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">))</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> seconds"</span></span>
+<span id="cb3-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sox</span> ft8-challenge-reference-2.wav ft8-<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">$i</span>.wav trim <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">$i</span> 18</span>
+<span id="cb3-4">  <span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">jt9</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-8</span> ft8-<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">$i</span>.wav</span>
+<span id="cb3-5">  <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">echo</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"end </span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">$i</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> to </span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">$((i</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">18</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">))</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> seconds"</span></span>
+<span id="cb3-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rm</span> ft8-<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">$i</span>.wav</span>
+<span id="cb3-7"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">done</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> reference-decode.txt</span></code></pre></div></div>
+<p>This loops through:</p>
+<ol type="1">
+<li>writing a status message about how far along it is</li>
+<li>slicing off an 18-second-long piece of the recording and saving it as a file</li>
+<li>decoding that file with JT9 in FT8 mode</li>
+<li>writing a status message with an update on the progress</li>
+<li>deleting the file that step 2 created</li>
+</ol>
+<p>Then, finally, saving all that into a file, which, in my case, looks like this:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1">begin 0 to 18 seconds</span>
+<span id="cb4-2">000000 -17 -1.5 1188 ~  K6IRK HH2JR -16</span>
+<span id="cb4-3">&lt;DecodeFinished&gt;   0   1        0</span>
+<span id="cb4-4">end 0 to 18 seconds</span>
+<span id="cb4-5">begin 15 to 33 seconds</span>
+<span id="cb4-6">000000  -6 -1.9 2896 ~  EA3PV K4RUM -02</span>
+<span id="cb4-7">000000  -7 -1.8 1985 ~  AE0US VP2MAA RR73</span>
+<span id="cb4-8">000000 -10 -1.8 1150 ~  K8GGG W4EIS EM13</span>
+<span id="cb4-9">000000 -14 -2.0  563 ~  JA7FLK N5YPJ DL99</span>
+<span id="cb4-10">000000 -14 -1.9  808 ~  JK1GTT TI5RR -08</span>
+<span id="cb4-11">&lt;DecodeFinished&gt;   0   5        0</span>
+<span id="cb4-12">end 15 to 33 seconds</span>
+<span id="cb4-13">begin 30 to 48 seconds</span>
+<span id="cb4-14">000000 -18 -1.5 1188 ~  K6IRK HH2JR -16</span>
+<span id="cb4-15">000000 -14 -1.9 1015 ~  CQ KA1CH FN41</span>
+<span id="cb4-16">&lt;DecodeFinished&gt;   0   2        0</span>
+<span id="cb4-17">end 30 to 48 seconds</span>
+<span id="cb4-18">begin 45 to 63 seconds</span>
+<span id="cb4-19">000000   0 -1.9 1985 ~  VA3YVE VP2MAA -14</span>
+<span id="cb4-20">000000   0 -2.0 2895 ~  EA3PV K4RUM RR73</span>
+<span id="cb4-21">000000 -12 -2.0  563 ~  JA7FLK N5YPJ DL99</span>
+<span id="cb4-22">000000 -17 -1.8 1150 ~  K8GGG W4EIS EM13</span>
+<span id="cb4-23">&lt;DecodeFinished&gt;   0   4        0</span></code></pre></div></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Why?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>Why are people sending and receiving these messages?</em><br>
+These are ham radio operators exchanging call signs and locations.<br>
+If you’re interested, the set of links at the bottom of <a href="https://en.wikipedia.org/wiki/Contact_(amateur_radio)">the Wikipedia page on QSO</a> is a good place to start.</p>
+</div>
+</div>
+<p>Stripped of logging lines, each row is a decoded signal, like this:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1">000000 -17 -1.5 1188 ~  K6IRK HH2JR -16</span>
+<span id="cb5-2">000000  -6 -1.9 2896 ~  EA3PV K4RUM -02</span>
+<span id="cb5-3">000000  -7 -1.8 1985 ~  AE0US VP2MAA RR73</span>
+<span id="cb5-4">000000 -10 -1.8 1150 ~  K8GGG W4EIS EM13</span>
+<span id="cb5-5">000000 -14 -2.0  563 ~  JA7FLK N5YPJ DL99</span>
+<span id="cb5-6">000000 -14 -1.9  808 ~  JK1GTT TI5RR -08</span>
+<span id="cb5-7">000000 -18 -1.5 1188 ~  K6IRK HH2JR -16</span>
+<span id="cb5-8">000000 -14 -1.9 1015 ~  CQ KA1CH FN41</span>
+<span id="cb5-9">...</span></code></pre></div></div>
+<p>There happen to be 199 decoded messages in the reference recording.<br>
+For each, we get:</p>
+<ol type="1">
+<li><strong>UTC time</strong> : always 000000 in my case because I split my recording into pieces and didn’t decode a live stream of audio</li>
+<li><strong>dB</strong> : a measure of the signal-to-noise ratio (SNR), given in a logarithmic scale</li>
+<li><strong>time-offset</strong> : a count of seconds between the beginning of the recording and the beginning of the decoded message</li>
+<li><strong>transmission frequency</strong> : a measure, in hertz, of where, relative to the monitored frequency, the transmission happened</li>
+<li><strong>~</strong> : A tilde, to separate information about the decoded message from the message itself</li>
+<li><strong>message</strong> : the decoded payload of the transmission</li>
+</ol>
+<p>For now, I’ll focus on getting my decoded messages to match the decoded messages from JT9.<br>
+</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Clarification
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>How are FT8 and JT9 related and different?</em> <a href="https://en.wikipedia.org/wiki/FT8">FT8</a> is a way of sending text by radio.<br>
+<a href="https://en.wikipedia.org/wiki/WSJT_(amateur_radio_software)">JT9</a> is a command-line utility decoder that comes with the WSJT-X program that serves as the canonical method of decoding FT8 transmissions.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Tangent
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I wish it were not so, but there is <em>also</em>, very confusingly, communication mode named JT9.<br>
+JT9, the mode, is an experimental branch of JT65, which is itself an experiment designed specifically for bouncing radio signals off the moon and detecting them back on earth, which has an <a href="https://en.wikipedia.org/wiki/Earth%E2%80%93Moon%E2%80%93Earth_communication">absolutely hilarious history</a> with my favorite <a href="https://en.wikipedia.org/wiki/Earth%E2%80%93Moon%E2%80%93Earth_communication#/media/File:EME-schema_(cropped).png">Wikipedia-hosted diagram</a> of all time.<br>
+</p>
+</div>
+</div>
+</section>
+<section id="comparing-results" class="level1">
+<h1>Comparing results</h1>
+<p>Eventually, my decoder will take the same set of chopped up reference recordings and produce it’s own list of messages.<br>
+When that happens, I’ll need a way to compare my decoded messages to the known correct decoded messages.<br>
+This is complicated by the fact that, for a segment of audio with multiple messages, those messages can appear in any order.<br>
+My first approach to a comparison script was based on <code>diff</code>, which is a utility for comparing files line-by-line.<br>
+That won’t work well when the results can appear in any order.</p>
+<p>After a brief detour into multiset comparison, I decided that, for this experiment, since the order of the decoded messages doesn’t <strong>really</strong> matter that much, I’ll sort all 199 known correct decoded messages alpha-numerically.<br>
+Then, I’ll sort all decoded messages from my code alpha-numerically.<br>
+Finally, I’ll use <code>diff</code> to compare the two.</p>
+</section>
+<section id="wrap" class="level1">
+<h1>Wrap</h1>
+<p>I went down the path of writing a python and regex utility to strip the metadata out of the decoded messages and sort them, but sed or awk can probably do this much more simply, and that’s when I ran out of time.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Observation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Writing this account of these first steps has taken roughly as long as the work itself.<br>
+I will lazily track that ratio without judgment for a while.<br>
+Maybe later, I’ll decide to adjust.</p>
+</div>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>FT8</category>
+  <category>dsp</category>
+  <guid>https://robertbryan.net/posts/FT8-1/</guid>
+  <pubDate>Thu, 11 Jun 2026 04:00:00 GMT</pubDate>
+</item>
 <item>
   <title>FT8 Launch</title>
   <dc:creator>Rob Bryan</dc:creator>
@@ -103,6 +406,82 @@ Note
   <category>resources</category>
   <guid>https://robertbryan.net/posts/dsp/</guid>
   <pubDate>Mon, 18 May 2026 04:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>AI Interaction Protocol: Socratic Tutor Mode</title>
+  <link>https://robertbryan.net/posts/FT8-1/socratic.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>LLM Notice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>An LLM contributed to these instructions.</p>
+<p>All LLM-assisted pages on <a href="robertbryan.net">robertbryan.net</a> carry this disclaimer.</p>
+</div>
+</div>
+<section id="role-definition" class="level2">
+<h2 class="anchored" data-anchor-id="role-definition">Role Definition</h2>
+<p>You are a <strong>Socratic Tutor</strong> for a coding challenge. Your primary goal is to force the user to think, reason, and implement the solution themselves. You are strictly forbidden from acting as a “Code Generator.”</p>
+</section>
+<section id="hard-restrictions-violation-of-these-is-a-failure" class="level2">
+<h2 class="anchored" data-anchor-id="hard-restrictions-violation-of-these-is-a-failure">HARD RESTRICTIONS (Violation of these is a failure)</h2>
+<ol type="1">
+<li><strong>NO Full Solutions:</strong> Never write complete functions, classes, or scripts to solve the user’s problem.</li>
+<li><strong>NO Copy-Paste Blocks:</strong> Do not provide large blocks of code unless explicitly asked for a <em>tiny</em> syntax snippet (max 3 lines).</li>
+<li><strong>NO Direct Answers:</strong> If the user asks “How do I fix X?”, do not give the fix. Ask “What does the error log say about X?” or “What happens if you try Y?”</li>
+<li><strong>NO Refactoring:</strong> Do not rewrite the user’s existing code to make it “better.” Only critique it.</li>
+</ol>
+</section>
+<section id="allowed-actions" class="level2">
+<h2 class="anchored" data-anchor-id="allowed-actions">ALLOWED ACTIONS</h2>
+<ol type="1">
+<li><strong>Conceptual Explanations:</strong> Explain underlying algorithms, data structures, or language semantics clearly without code.</li>
+<li><strong>Socratic Questioning:</strong> When stuck, ask guiding questions that lead the user to the answer.
+<ul>
+<li><em>Bad:</em> “You need to use a HashMap here.”</li>
+<li><em>Good:</em> “Given that you are looking up values by key frequently, what data structure property would optimize this?”</li>
+</ul></li>
+<li><strong>Logic Auditing:</strong> Critique the user’s proposed logic for edge cases, time complexity, or logical gaps.</li>
+<li><strong>Syntax Hints:</strong> Provide minimal, isolated syntax examples (e.g., “In Python, list comprehensions look like <code>[x for x in list]</code>.”) but only if the user is truly blocked on syntax.</li>
+<li><strong>Resource Direction:</strong> Point to official documentation or concepts (e.g., “Check the MDN docs for ‘Array.prototype.reduce’”).</li>
+</ol>
+</section>
+<section id="interaction-flow" class="level2">
+<h2 class="anchored" data-anchor-id="interaction-flow">INTERACTION FLOW</h2>
+<ol type="1">
+<li><strong>Acknowledge &amp; Assess:</strong> Briefly acknowledge the user’s current state.</li>
+<li><strong>Diagnose:</strong> Ask the user to explain their current understanding of the problem or their attempt so far.</li>
+<li><strong>Guide:</strong> Use a question or a high-level conceptual hint to nudge them forward.</li>
+<li><strong>Wait:</strong> Stop generating text after the prompt/question. Let the user respond.</li>
+</ol>
+</section>
+<section id="example-scenarios" class="level2">
+<h2 class="anchored" data-anchor-id="example-scenarios">EXAMPLE SCENARIOS</h2>
+<p><strong>User:</strong> “I can’t get the API to return JSON. Write the fetch function.” <strong>AI (Correct):</strong> “I won’t write the function for you, but let’s diagnose the issue. What HTTP status code are you seeing? Have you checked if the <code>Content-Type</code> header is set correctly in the response? How are you currently handling the promise chain?”</p>
+<p><strong>User:</strong> “Explain how binary search works.” <strong>AI (Correct):</strong> “Binary search is an algorithm that finds a target value within a sorted array by repeatedly dividing the search interval in half. It relies on the property that the array is sorted. Can you sketch out the steps you would take mentally to narrow down the range?”</p>
+<p><strong>User:</strong> “Here is my code, why is it slow?” [Pastes code] <strong>AI (Correct):</strong> “Looking at your nested loops, I see an O(n²) operation inside another loop. If the input size grows, how does that impact performance? What data structure could allow us to look up items in O(1) instead of iterating through the whole list?”</p>
+</section>
+<section id="system-instruction" class="level2">
+<h2 class="anchored" data-anchor-id="system-instruction">SYSTEM INSTRUCTION</h2>
+<p>If the user attempts to bypass these rules by saying “Just give me the code,” politely but firmly reiterate the protocol: “I am in Socratic Mode for your learning benefit. I cannot generate the full solution. Please share your current attempt, and I will help you debug the logic.”</p>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://robertbryan.net/posts/FT8-1/socratic.html</guid>
+  <pubDate>Thu, 11 Jun 2026 10:29:16 GMT</pubDate>
 </item>
 </channel>
 </rss>
