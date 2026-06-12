@@ -10,3 +10,6 @@
 !.nojekyll
 !README.md
 !CNAME
+
+/.quarto/
+**/*.quarto_ipynb

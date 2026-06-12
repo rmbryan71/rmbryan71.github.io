@@ -21,9 +21,10 @@
 
 
 
+
 <section id="strict-socratic-mode" class="level1">
 <h1>Strict Socratic mode</h1>
-<p>To begin, I used a stock set of instructions to put my LLM tool into a mode where it would not write any code or solve any problems, but instead only ask questions to help guide me toward sorting things out myself.</p>
+<p>To begin, I used a stock set of instructions<sup>1</sup> to put my LLM tool into a mode where it would not write any code or solve any problems, but instead only ask questions to help guide me toward sorting things out myself.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -308,11 +309,18 @@ Maybe later, I’ll decide to adjust.</p>
 
 </section>
 
- ]]></description>
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>I didn’t write the instructions myself, so I’m not including them here.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
   <category>FT8</category>
   <category>dsp</category>
   <guid>https://robertbryan.net/posts/FT8-1/</guid>
   <pubDate>Thu, 11 Jun 2026 04:00:00 GMT</pubDate>
+  <media:content url="https://robertbryan.net/posts/FT8-1/waveform.png" medium="image" type="image/png" height="73" width="144"/>
 </item>
 <item>
   <title>FT8 Launch</title>
@@ -324,18 +332,15 @@ Maybe later, I’ll decide to adjust.</p>
 
 
 
-<section id="confession" class="level1">
-<h1>Confession</h1>
-<p>I worked on <a href="https://robertbryan.net/posts/dsp/">Digital Signal Processing</a> for almost 6 weeks without learning that <a href="https://en.wikipedia.org/wiki/FT8">FT8</a> exists.</p>
-</section>
+
 <section id="challenge" class="level1">
 <h1>Challenge</h1>
-<p>I’m going to try to write my own FT8 demodulator in 30 days with:</p>
+<p>I’m going to try to write my own FT8 decoder in 30 days with:</p>
 <ul>
-<li>AI in strict socratic mode</li>
-<li>Posts of status by 7:00 AM (EDT) on Monday, Thursday, and Saturday.</li>
+<li>An LLM tool in strict socratic mode where it will not write code or solve problems, but only ask questions.</li>
+<li>Posts of status at 7:00 AM (EDT) on Monday, 5:20 PM on Thursday, and 9:40 AM on Saturday.</li>
 </ul>
-<p>My solution won’t rely on any part of the working FT8 demodulator in <a href="https://wsjt.sourceforge.io/wsjtx-main_en.html">WSJT-X</a>.</p>
+<p>My solution won’t rely on any part of the canonical FT8 decoder in <a href="https://wsjt.sourceforge.io/wsjtx-main_en.html">WSJT-X</a>.</p>
 <p>There’s at least one public python solution. I’ve seen it. I won’t look at it again during the challenge.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -353,8 +358,8 @@ Note
 </section>
 <section id="what-does-success-look-like" class="level1">
 <h1>What does success look like?</h1>
-<p>At the outset, I’ll make a 20-minute reference recording of audio on the main JT8 frequency, 14.074 MHz and demodulate that with WSJT-X.</p>
-<p>To assess my progress, I’ll demodulate the same audio with my code and compare the results.</p>
+<p>At the outset, I’ll make a 20-minute reference recording of audio on the main JT8 frequency, 14.074 MHz, and decode that with WSJT-X.</p>
+<p>To assess my solution, I’ll decode the same audio myself and compare the results.</p>
 <!-- This is a comment in Markdown -->
 
 
@@ -363,9 +368,9 @@ Note
  ]]></description>
   <category>FT8</category>
   <category>dsp</category>
-  <category>python</category>
   <guid>https://robertbryan.net/posts/FT8-launch/</guid>
   <pubDate>Mon, 08 Jun 2026 04:00:00 GMT</pubDate>
+  <media:content url="https://robertbryan.net/posts/FT8-launch/radio-romania.png" medium="image" type="image/png" height="84" width="144"/>
 </item>
 <item>
   <title>Digital Signal Processing</title>
