@@ -2,19 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://robertbryan.net/about.html</loc>
-    <lastmod>2026-06-09T10:55:15.869Z</lastmod>
+    <lastmod>2026-06-14T09:27:23.037Z</lastmod>
   </url>
   <url>
     <loc>https://robertbryan.net/posts/dsp/index.html</loc>
     <lastmod>2026-05-23T15:05:39.967Z</lastmod>
   </url>
   <url>
-    <loc>https://robertbryan.net/posts/FT8-launch/index.html</loc>
-    <lastmod>2026-06-12T07:43:40.864Z</lastmod>
+    <loc>https://robertbryan.net/posts/FT8-1/index.html</loc>
+    <lastmod>2026-06-14T16:55:30.220Z</lastmod>
   </url>
   <url>
-    <loc>https://robertbryan.net/posts/FT8-1/index.html</loc>
-    <lastmod>2026-06-12T07:56:22.231Z</lastmod>
+    <loc>https://robertbryan.net/posts/FT8-launch/index.html</loc>
+    <lastmod>2026-06-14T16:56:56.015Z</lastmod>
+  </url>
+  <url>
+    <loc>https://robertbryan.net/posts/FT8-2/index.html</loc>
+    <lastmod>2026-06-14T16:49:45.557Z</lastmod>
   </url>
   <url>
     <loc>https://robertbryan.net/index.html</loc>

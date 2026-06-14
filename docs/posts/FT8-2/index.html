@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Rob Bryan">
-<meta name="dcterms.date" content="2026-06-12">
+<meta name="dcterms.date" content="2026-06-15">
 
-<title>FT8 First Steps – Curious Enough</title>
+<title>FT8 Background and Plan – Curious Enough</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -307,7 +307,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">FT8 First Steps</h1>
+      <h1 class="title">FT8 Background and Plan</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">FT8</div>
                 <div class="quarto-category">dsp</div>
@@ -328,7 +328,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 12, 2026</p>
+        <p class="date">June 15, 2026</p>
       </div>
     </div>
     
@@ -348,132 +348,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="strict-socratic-mode" class="level1">
-<h1>Strict Socratic mode</h1>
-<p>To begin, I used a stock set of instructions<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> to put my LLM tool into a mode where it would not write any code or solve any problems, but instead only ask questions to help guide me toward sorting things out myself.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Observation
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Socratic mode has been a perfect fit for this learning project so far.<br>
-I’m still comfortable with my complete ban on all LLM involvement in text writing, and Socratic mode gives me the same clarity with coding.</p>
-</div>
-</div>
+<section id="last-easy-thing" class="level1">
+<h1>Last easy thing</h1>
+<p>I wrote this pipeline to clean up and sort the decoded reference signal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="st">'FS="~" {print $2}'</span> reference-signals.txt <span class="kw">|</span> <span class="fu">sed</span> <span class="at">-E</span> <span class="st">'s/^[[:space:]]+//'</span> <span class="kw">|</span> <span class="fu">sort</span> <span class="op">&gt;</span> reference-signals-sorted.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Reading from left to right, this:</p>
+<ol type="1">
+<li>uses <a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html">awk</a> to separate each line in reference-signals.txt by the tilde, then pass the second part on</li>
+<li>uses <a href="https://www.gnu.org/software/sed/manual/sed.html">sed</a> to remove the leading spaces, then pass the rest along</li>
+<li>uses <a href="https://en.wikipedia.org/wiki/Sort_(Unix)">sort</a> to put the results in alphanumeric order and write the results to the named file</li>
+</ol>
+<p>That ended the opening phase of the project where the landscape of tasks was naturally simple and linear.</p>
 </section>
-<section id="reference-recording" class="level1">
-<h1>Reference recording</h1>
-<p>My test to determine how well my <a href="https://en.wikipedia.org/wiki/FT8">FT8</a> decoder works will be to use my decoder on a reference recording, then compare my results to the results from the JT9 binary utility multi-mode decoder written with the help of <a href="https://en.wikipedia.org/wiki/Joseph_Hooton_Taylor_Jr.">Joseph Hooton Taylor Jr.</a>, co-creator of the FT8 protocol.</p>
-<p>From previous work, I have a record.py program that I used to make the reference recording with this command:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> record.py 14.074 usb <span class="at">--duration</span> 20 <span class="at">--output</span> ft8-challenge-reference.wav</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>These arguments specify that the recorder should:</p>
-<ol type="1">
-<li>capture on frequency 14.074 MHz, which is a standard for FT8 transmissions</li>
-<li>use upper side band (usb) demodulation</li>
-<li>record 20 minutes of audio</li>
-<li>save the results in a file with a specific name</li>
-</ol>
-<p>This worked as designed.<br>
-I’ve put a short sample of the recording here if you’re interested in hearing what a raw FT8 transmission sounds like.</p>
-<audio controls="">
-  <source src="sample.wav" type="audio/wav">
-</audio>
-<p>Set your system volume on high and your personal expectations on <strong>low</strong>.<br>
-Like, super-low.<br>
-It’s mostly static with a faint, high-pitched whine in the background.</p>
-<div class="quarto-figure quarto-figure-left">
-<figure class="figure">
-<p><img src="waveform.png" class="img-fluid figure-img"></p>
-<figcaption>Screenshot of my homemade waveform visualizer showing signals on sub-frequencies in a passband</figcaption>
-</figure>
-</div>
+<section id="reading" class="level1">
+<h1>Reading</h1>
+<p>I read a few blog posts, wikipedia entries, and slide decks before I found <strong>The Paper</strong>:</p>
+<p><a href="https://wsjt.sourceforge.io/FT4_FT8_QEX.pdf">The FT4 and FT8 Communication Protocols</a></p>
+<p>It’s 11 pages, written by the people who designed the method, and explains exactly how everything works, all the way down to the tables they use to translate the human-readable numbers and letters of the payload back and forth into raw bits before and after transmission.</p>
 </section>
-<section id="decoding-the-reference" class="level1">
-<h1>Decoding the reference</h1>
-<p>WSJT-X and JT9 are built to decode live audio at 12 MHz, not recordings at 40 Mhz.<br>
-So first, I used the <a href="https://en.wikipedia.org/wiki/SoX">sox</a> utility to convert the sample rate with:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sox</span> ft8-challenge-reference.wav <span class="at">-r</span> 12000 ft8-challenge-reference-2.wav</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Then, in order to get JT9 to decode the 20-minutes of audio, I wrote this little script to chop the reference recording into pieces and decode each piece:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="kw">((</span><span class="va">i</span><span class="op">=</span><span class="dv">0</span><span class="kw">;</span> <span class="va">i</span><span class="op">&lt;</span><span class="dv">1185</span><span class="kw">;</span> <span class="va">i</span><span class="op">+=</span><span class="dv">15</span><span class="kw">));</span> <span class="cf">do</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">"begin </span><span class="va">$i</span><span class="st"> to </span><span class="va">$((i</span><span class="op">+</span><span class="dv">18</span><span class="va">))</span><span class="st"> seconds"</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sox</span> ft8-challenge-reference-2.wav ft8-<span class="va">$i</span>.wav trim <span class="va">$i</span> 18</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="ex">jt9</span> <span class="at">-8</span> ft8-<span class="va">$i</span>.wav</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">echo</span> <span class="st">"end </span><span class="va">$i</span><span class="st"> to </span><span class="va">$((i</span><span class="op">+</span><span class="dv">18</span><span class="va">))</span><span class="st"> seconds"</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rm</span> ft8-<span class="va">$i</span>.wav</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span> <span class="op">&gt;</span> reference-decode.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This loops through:</p>
+<section id="ft8-facts" class="level1">
+<h1>FT8 facts</h1>
+<p>From <strong>The Paper</strong>, FT8:</p>
 <ol type="1">
-<li>writing a status message about how far along it is</li>
-<li>slicing off an 18-second-long piece of the recording and saving it as a file</li>
-<li>decoding that file with JT9 in FT8 mode</li>
-<li>writing a status message with an update on the progress</li>
-<li>deleting the file that step 2 created</li>
+<li>Is based on a 15-second transmission cycle</li>
+<li>Has a tiny payload, 77 bits per cycle</li>
+<li>Uses a narrow, 50 Hz bandwidth</li>
+<li>Uses continuous phase frequency shift keying <a href="https://en.wikipedia.org/wiki/Continuous_phase_modulation">CPFSK</a></li>
+<li>Works 27 dB <strong>below</strong> the <a href="https://en.wikipedia.org/wiki/Noise_floor">noise floor</a></li>
+<li>Has a <a href="https://en.wikipedia.org/wiki/Constant_envelope">constant-envelope waveform</a></li>
+<li>Uses <a href="https://en.wikipedia.org/wiki/Error_correction_code">forward error correction</a></li>
+<li>Uses 7x7 <a href="https://en.wikipedia.org/wiki/Costas_array">Costas arrays</a> for synchronization</li>
 </ol>
-<p>Then, finally, saving all that into a file, which, in my case, looks like this:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>begin 0 to 18 seconds</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>000000 -17 -1.5 1188 ~  K6IRK HH2JR -16</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>&lt;DecodeFinished&gt;   0   1        0</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>end 0 to 18 seconds</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>begin 15 to 33 seconds</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>000000  -6 -1.9 2896 ~  EA3PV K4RUM -02</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>000000  -7 -1.8 1985 ~  AE0US VP2MAA RR73</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>000000 -10 -1.8 1150 ~  K8GGG W4EIS EM13</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>000000 -14 -2.0  563 ~  JA7FLK N5YPJ DL99</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>000000 -14 -1.9  808 ~  JK1GTT TI5RR -08</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>&lt;DecodeFinished&gt;   0   5        0</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>end 15 to 33 seconds</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>begin 30 to 48 seconds</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>000000 -18 -1.5 1188 ~  K6IRK HH2JR -16</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>000000 -14 -1.9 1015 ~  CQ KA1CH FN41</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>&lt;DecodeFinished&gt;   0   2        0</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>end 30 to 48 seconds</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>begin 45 to 63 seconds</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>000000   0 -1.9 1985 ~  VA3YVE VP2MAA -14</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>000000   0 -2.0 2895 ~  EA3PV K4RUM RR73</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>000000 -12 -2.0  563 ~  JA7FLK N5YPJ DL99</span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>000000 -17 -1.8 1150 ~  K8GGG W4EIS EM13</span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>&lt;DecodeFinished&gt;   0   4        0</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Why?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><em>Why are people sending and receiving these messages?</em><br>
-These are ham radio operators exchanging call signs and locations.<br>
-If you’re interested, the set of links at the bottom of <a href="https://en.wikipedia.org/wiki/Contact_(amateur_radio)">the Wikipedia page on QSO</a> is a good place to start.</p>
-</div>
-</div>
-<p>Stripped of logging lines, each row is a decoded signal, like this:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>000000 -17 -1.5 1188 ~  K6IRK HH2JR -16</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>000000  -6 -1.9 2896 ~  EA3PV K4RUM -02</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>000000  -7 -1.8 1985 ~  AE0US VP2MAA RR73</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>000000 -10 -1.8 1150 ~  K8GGG W4EIS EM13</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>000000 -14 -2.0  563 ~  JA7FLK N5YPJ DL99</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>000000 -14 -1.9  808 ~  JK1GTT TI5RR -08</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>000000 -18 -1.5 1188 ~  K6IRK HH2JR -16</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>000000 -14 -1.9 1015 ~  CQ KA1CH FN41</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>There happen to be 199 decoded messages in the reference recording.<br>
-For each, we get:</p>
-<ol type="1">
-<li><strong>UTC time</strong> : always 000000 in my case because I split my recording into pieces and didn’t decode a live stream of audio</li>
-<li><strong>dB</strong> : a measure of the signal-to-noise ratio (SNR), given in a logarithmic scale</li>
-<li><strong>time-offset</strong> : a count of seconds between the beginning of the recording and the beginning of the decoded message</li>
-<li><strong>transmission frequency</strong> : a measure, in hertz, of where, relative to the monitored frequency, the transmission happened</li>
-<li><strong>~</strong> : A tilde, to separate information about the decoded message from the message itself</li>
-<li><strong>message</strong> : the decoded payload of the transmission</li>
-</ol>
-<p>For now, I’ll focus on getting my decoded messages to match the decoded messages from JT9.<br>
+</section>
+<section id="cpfsk" class="level1">
+<h1>CPFSK</h1>
+<p>Continuous phase frequency shift keying is a special kind of <a href="https://en.wikipedia.org/wiki/Frequency-shift_keying">frequency shift key (FSK)</a>.<br>
+FSK encodes a digital information on a carrier signal by changing the frequency.</p>
+<p><a href="https://en.wikipedia.org/wiki/Reginald_Fessenden">Reginald Fessenden</a> came up with FSK in 1910. He also invented <a href="https://en.wikipedia.org/wiki/Amplitude_modulation">amplitude modulation (AM)</a> and worked with <a href="https://en.wikipedia.org/wiki/Thomas_Edison">Thomas Edison</a>.</p>
+<p><img src="Fessenden_500_CPS_Transmitter.jpg" class="img-fluid" alt="1910 penny postcard of Reginald Fessenden’s Brant Rock, Massachusetts radio tower"><br>
+<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p><a href="https://faculty.kfupm.edu.sa/EE/muqaibel/Courses/EE571%20Digital%20Communications%20I/notes/Digital%20Modulation%20Schemes/Continuous-Phase%20Frequency-Shift%20Keying%20(CPFSK).pdf">Dr.&nbsp;Ali Muqaibel’s slides</a> on CPFSK were helpful in general, and specifically with the inset graphic on slide 2 that shows how a digital modulating wave alters a carrier wave.</p>
+<p><a href="https://www.winlab.rutgers.edu/~narayan/Course/Wless/Lectures2/lect9.pdf">These lecture notes</a> by Narayan Mandayam and Andrej Domazetovic explain CPFSK well at the beginning and make a special point of clarifying the difference between <strong>full response</strong> and <strong>partial response</strong> forms.</p>
+</section>
+<section id="background" class="level1">
+<h1>Background</h1>
+<p>At this point, I intentionally stopped taking notes and went into “sponge mode” where I looked up every term I didn’t understand in <strong>The Paper</strong> and went a few steps down each of these paths <em>and about a dozen others which were tangents</em>:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Error_correction_code#Forward_error_correction">Forward error correction</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Low-density_parity-check_code">Low-density parity-check codes (LDPC)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gray_code">Gray coding</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">Fast Fourier Transforms (FFT)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Costas_array">Costas arrays</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cyclic_redundancy_check">Cyclical redundancy checks (CRC)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Frequency-shift_keying#Gaussian_frequency-shift_keying">Gaussian frequency shift keying</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Demodulation">Demodulation</a> vs <a href="https://en.wikipedia.org/wiki/Parsing">Decoding</a></li>
+</ul>
+</section>
+<section id="the-tension" class="level1">
+<h1>The tension</h1>
+<p>I don’t understand any of these topics fully.<br>
+Some of them are whole areas of study in themselves.<br>
+If I waited to start writing code until I understood them all, I’d never get anywhere.</p>
+<p>At the same time, if I had started writing code without spending <em>any</em> time on background, I would have inevitably wasted time implementing solutions based on incorrect understandings.</p>
+<section id="when-to-stop-reading-and-start-writing" class="level2">
+<h2 class="anchored" data-anchor-id="when-to-stop-reading-and-start-writing">When to stop reading and start writing?</h2>
+<p>My hope is to notice and identify the impulse to code when it arrives.<br>
+<strong>“I could start writing that immediately!”</strong> is how this sounds internally, with excitement.<br>
 </p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -481,59 +421,31 @@ For each, we get:</p>
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Clarification
+<span class="screen-reader-only">Note</span>Trap!
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><em>How are FT8 and JT9 related and different?</em> <a href="https://en.wikipedia.org/wiki/FT8">FT8</a> is a way of sending text by radio.<br>
-<a href="https://en.wikipedia.org/wiki/WSJT_(amateur_radio_software)">JT9</a> is a command-line utility decoder that comes with the WSJT-X program that serves as the canonical method of decoding FT8 transmissions.</p>
+<p>It’s a trap.</p>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Tangent
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>I wish it were not so, but there is <em>also</em>, very confusingly, communication mode named JT9.<br>
-JT9, the mode, is an experimental branch of JT65, which is itself an experiment designed specifically for bouncing radio signals off the moon and detecting them back on earth, which has an <a href="https://en.wikipedia.org/wiki/Earth%E2%80%93Moon%E2%80%93Earth_communication">absolutely hilarious history</a> with my favorite <a href="https://en.wikipedia.org/wiki/Earth%E2%80%93Moon%E2%80%93Earth_communication#/media/File:EME-schema_(cropped).png">Wikipedia-hosted diagram</a> of all time.<br>
-</p>
-</div>
-</div>
+<p>I only know it’s a trap because I’ve made this mistake enough times to eventually learn.<br>
+Currently, my practice is to wait as long as possible before I start coding.<br>
+When the pull to code is overwhelming, maybe then it’s time.<br>
+I definitely don’t start coding without an end-to-end plan.</p>
 </section>
-<section id="comparing-results" class="level1">
-<h1>Comparing results</h1>
-<p>Eventually, my decoder will take the same set of chopped up reference recordings and produce it’s own list of messages.<br>
-When that happens, I’ll need a way to compare my decoded messages to the known correct decoded messages.<br>
-This is complicated by the fact that, for a segment of audio with multiple messages, those messages can appear in any order.<br>
-My first approach to a comparison script was based on <code>diff</code>, which is a utility for comparing files line-by-line.<br>
-That won’t work well when the results can appear in any order.</p>
-<p>After a brief detour into multiset comparison, I decided that, for this experiment, since the order of the decoded messages doesn’t <strong>really</strong> matter that much, I’ll sort all 199 known correct decoded messages alpha-numerically.<br>
-Then, I’ll sort all decoded messages from my code alpha-numerically.<br>
-Finally, I’ll use <code>diff</code> to compare the two.</p>
 </section>
-<section id="wrap" class="level1">
-<h1>Wrap</h1>
-<p>I went down the path of writing a python and regex utility to strip the metadata out of the decoded messages and sort them, but sed or awk can probably do this much more simply, and that’s when I ran out of time.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Observation
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Writing this account of these first steps has taken roughly as long as the work itself.<br>
-I will lazily track that ratio without judgment for a while.<br>
-Maybe later, I’ll decide to adjust.</p>
-</div>
-</div>
+<section id="end-to-end-plan" class="level1">
+<h1>End-to-end plan</h1>
+<p>I hesitate to share this because it’s based on my hilariously shallow levels of understanding of the technologies at work.</p>
+<p>Anyway, here is my sketch plan for decoding a single 15-second window of FT8 transmissions:</p>
+<ol type="1">
+<li>One FFT of the whole passband to identify which 50 Hz sub-frequencies have signals on them.</li>
+<li>For each candidate sub-frequency, scan for Costas arrays to identify timing and carrier frequency drift.</li>
+<li>FFT each of the 58 data-symbol positions, guess which of 8 tones are present, then Gray-decode each guess to its 3-bit payload.</li>
+<li>Error-correct by LDPC-decoding.</li>
+<li>Use the CRC to validate accurate decoding.</li>
+<li>Decode the 77-bit message into letters and numbers using the arbitrary scheme the FT8 inventors picked based on assumptions about the domain-specific use of FT8 for HAM radio signal exchanges.</li>
+</ol>
 
 
 </section>
@@ -542,7 +454,7 @@ Maybe later, I’ll decide to adjust.</p>
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>I didn’t write the instructions myself, so I’m not including them here.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Used with <a href="https://en.wikipedia.org/wiki/File:Fessenden_500_CPS_Transmitter.jpg">attribution from the Wikimedia Commons</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

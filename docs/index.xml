@@ -10,7 +10,153 @@
 <atom:link href="https://robertbryan.net/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Thu, 11 Jun 2026 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 15 Jun 2026 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>FT8 Background and Plan</title>
+  <dc:creator>Rob Bryan</dc:creator>
+  <link>https://robertbryan.net/posts/FT8-2/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<section id="last-easy-thing" class="level1">
+<h1>Last easy thing</h1>
+<p>I wrote this pipeline to clean up and sort the decoded reference signal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">awk</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'FS="~" {print $2}'</span> reference-signals.txt <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">|</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sed</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-E</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'s/^[[:space:]]+//'</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">|</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sort</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&gt;</span> reference-signals-sorted.txt</span></code></pre></div></div>
+<p>Reading from left to right, this:</p>
+<ol type="1">
+<li>uses <a href="https://pubs.opengroup.org/onlinepubs/9799919799/utilities/awk.html">awk</a> to separate each line in reference-signals.txt by the tilde, then pass the second part on</li>
+<li>uses <a href="https://www.gnu.org/software/sed/manual/sed.html">sed</a> to remove the leading spaces, then pass the rest along</li>
+<li>uses <a href="https://en.wikipedia.org/wiki/Sort_(Unix)">sort</a> to put the results in alphanumeric order and write the results to the named file</li>
+</ol>
+<p>That ended the opening phase of the project where the landscape of tasks was naturally simple and linear.</p>
+</section>
+<section id="reading" class="level1">
+<h1>Reading</h1>
+<p>I read a few blog posts, wikipedia entries, and slide decks before I found <strong>The Paper</strong>:</p>
+<p><a href="https://wsjt.sourceforge.io/FT4_FT8_QEX.pdf">The FT4 and FT8 Communication Protocols</a></p>
+<p>It’s 11 pages, written by the people who designed the method, and explains exactly how everything works, all the way down to the tables they use to translate the human-readable numbers and letters of the payload back and forth into raw bits before and after transmission.</p>
+</section>
+<section id="ft8-facts" class="level1">
+<h1>FT8 facts</h1>
+<p>From <strong>The Paper</strong>, FT8:</p>
+<ol type="1">
+<li>Is based on a 15-second transmission cycle</li>
+<li>Has a tiny payload, 77 bits per cycle</li>
+<li>Uses a narrow, 50 Hz bandwidth</li>
+<li>Uses continuous phase frequency shift keying <a href="https://en.wikipedia.org/wiki/Continuous_phase_modulation">CPFSK</a></li>
+<li>Works 27 dB <strong>below</strong> the <a href="https://en.wikipedia.org/wiki/Noise_floor">noise floor</a></li>
+<li>Has a <a href="https://en.wikipedia.org/wiki/Constant_envelope">constant-envelope waveform</a></li>
+<li>Uses <a href="https://en.wikipedia.org/wiki/Error_correction_code">forward error correction</a></li>
+<li>Uses 7x7 <a href="https://en.wikipedia.org/wiki/Costas_array">Costas arrays</a> for synchronization</li>
+</ol>
+</section>
+<section id="cpfsk" class="level1">
+<h1>CPFSK</h1>
+<p>Continuous phase frequency shift keying is a special kind of <a href="https://en.wikipedia.org/wiki/Frequency-shift_keying">frequency shift key (FSK)</a>.<br>
+FSK encodes a digital information on a carrier signal by changing the frequency.</p>
+<p><a href="https://en.wikipedia.org/wiki/Reginald_Fessenden">Reginald Fessenden</a> came up with FSK in 1910. He also invented <a href="https://en.wikipedia.org/wiki/Amplitude_modulation">amplitude modulation (AM)</a> and worked with <a href="https://en.wikipedia.org/wiki/Thomas_Edison">Thomas Edison</a>.</p>
+<p><img src="https://robertbryan.net/posts/FT8-2/Fessenden_500_CPS_Transmitter.jpg" class="img-fluid" alt="1910 penny postcard of Reginald Fessenden’s Brant Rock, Massachusetts radio tower"><br>
+<sup>1</sup></p>
+<p><a href="https://faculty.kfupm.edu.sa/EE/muqaibel/Courses/EE571%20Digital%20Communications%20I/notes/Digital%20Modulation%20Schemes/Continuous-Phase%20Frequency-Shift%20Keying%20(CPFSK).pdf">Dr.&nbsp;Ali Muqaibel’s slides</a> on CPFSK were helpful in general, and specifically with the inset graphic on slide 2 that shows how a digital modulating wave alters a carrier wave.</p>
+<p><a href="https://www.winlab.rutgers.edu/~narayan/Course/Wless/Lectures2/lect9.pdf">These lecture notes</a> by Narayan Mandayam and Andrej Domazetovic explain CPFSK well at the beginning and make a special point of clarifying the difference between <strong>full response</strong> and <strong>partial response</strong> forms.</p>
+</section>
+<section id="background" class="level1">
+<h1>Background</h1>
+<p>At this point, I intentionally stopped taking notes and went into “sponge mode” where I looked up every term I didn’t understand in <strong>The Paper</strong> and went a few steps down each of these paths <em>and about a dozen others which were tangents</em>:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Error_correction_code#Forward_error_correction">Forward error correction</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Low-density_parity-check_code">Low-density parity-check codes (LDPC)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gray_code">Gray coding</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">Fast Fourier Transforms (FFT)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Costas_array">Costas arrays</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cyclic_redundancy_check">Cyclical redundancy checks (CRC)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Frequency-shift_keying#Gaussian_frequency-shift_keying">Gaussian frequency shift keying</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Demodulation">Demodulation</a> vs <a href="https://en.wikipedia.org/wiki/Parsing">Decoding</a></li>
+</ul>
+</section>
+<section id="the-tension" class="level1">
+<h1>The tension</h1>
+<p>I don’t understand any of these topics fully.<br>
+Some of them are whole areas of study in themselves.<br>
+If I waited to start writing code until I understood them all, I’d never get anywhere.</p>
+<p>At the same time, if I had started writing code without spending <em>any</em> time on background, I would have inevitably wasted time implementing solutions based on incorrect understandings.</p>
+<section id="when-to-stop-reading-and-start-writing" class="level2">
+<h2 class="anchored" data-anchor-id="when-to-stop-reading-and-start-writing">When to stop reading and start writing?</h2>
+<p>My hope is to notice and identify the impulse to code when it arrives.<br>
+<strong>“I could start writing that immediately!”</strong> is how this sounds internally, with excitement.<br>
+</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Trap!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It’s a trap.</p>
+</div>
+</div>
+<p>I only know it’s a trap because I’ve made this mistake enough times to eventually learn.<br>
+Currently, my practice is to wait as long as possible before I start coding.<br>
+When the pull to code is overwhelming, maybe then it’s time.<br>
+I definitely don’t start coding without an end-to-end plan.</p>
+</section>
+</section>
+<section id="end-to-end-plan" class="level1">
+<h1>End-to-end plan</h1>
+<p>I hesitate to share this because it’s based on my hilariously shallow levels of understanding of the technologies at work.</p>
+<p>Anyway, here is my sketch plan for decoding a single 15-second window of FT8 transmissions:</p>
+<ol type="1">
+<li>One FFT of the whole passband to identify which 50 Hz sub-frequencies have signals on them.</li>
+<li>For each candidate sub-frequency, scan for Costas arrays to identify timing and carrier frequency drift.</li>
+<li>FFT each of the 58 data-symbol positions, guess which of 8 tones are present, then Gray-decode each guess to its 3-bit payload.</li>
+<li>Error-correct by LDPC-decoding.</li>
+<li>Use the CRC to validate accurate decoding.</li>
+<li>Decode the 77-bit message into letters and numbers using the arbitrary scheme the FT8 inventors picked based on assumptions about the domain-specific use of FT8 for HAM radio signal exchanges.</li>
+</ol>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Used with <a href="https://en.wikipedia.org/wiki/File:Fessenden_500_CPS_Transmitter.jpg">attribution from the Wikimedia Commons</a>.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>FT8</category>
+  <category>dsp</category>
+  <guid>https://robertbryan.net/posts/FT8-2/</guid>
+  <pubDate>Mon, 15 Jun 2026 04:00:00 GMT</pubDate>
+  <media:content url="https://robertbryan.net/posts/FT8-2/Fessenden_500_CPS_Transmitter.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>FT8 First Steps</title>
   <dc:creator>Rob Bryan</dc:creator>
@@ -66,6 +212,12 @@ I’ve put a short sample of the recording here if you’re interested in hearin
 <p>Set your system volume on high and your personal expectations on <strong>low</strong>.<br>
 Like, super-low.<br>
 It’s mostly static with a faint, high-pitched whine in the background.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="https://robertbryan.net/posts/FT8-1/waveform.png" class="img-fluid figure-img"></p>
+<figcaption>Screenshot of my homemade waveform visualizer showing signals on sub-frequencies in a passband</figcaption>
+</figure>
+</div>
 </section>
 <section id="decoding-the-reference" class="level1">
 <h1>Decoding the reference</h1>
@@ -319,7 +471,7 @@ Maybe later, I’ll decide to adjust.</p>
   <category>FT8</category>
   <category>dsp</category>
   <guid>https://robertbryan.net/posts/FT8-1/</guid>
-  <pubDate>Thu, 11 Jun 2026 04:00:00 GMT</pubDate>
+  <pubDate>Fri, 12 Jun 2026 04:00:00 GMT</pubDate>
   <media:content url="https://robertbryan.net/posts/FT8-1/waveform.png" medium="image" type="image/png" height="73" width="144"/>
 </item>
 <item>
@@ -335,12 +487,12 @@ Maybe later, I’ll decide to adjust.</p>
 
 <section id="challenge" class="level1">
 <h1>Challenge</h1>
-<p>I’m going to try to write my own FT8 decoder in 30 days with:</p>
+<p>I’m going to try to write my own FT8 decoder with:</p>
 <ul>
 <li>An LLM tool in strict socratic mode where it will not write code or solve problems, but only ask questions.</li>
-<li>Posts of status at 7:00 AM (EDT) on Monday, 5:20 PM on Thursday, and 9:40 AM on Saturday.</li>
+<li>Posts of status at 7:00 AM on Monday and 8:00 PM on Friday.</li>
 </ul>
-<p>My solution won’t rely on any part of the canonical FT8 decoder in <a href="https://wsjt.sourceforge.io/wsjtx-main_en.html">WSJT-X</a>.</p>
+<p>My solution will be independent from the canonical FT8 decoder in <a href="https://wsjt.sourceforge.io/wsjtx-main_en.html">WSJT-X</a>.</p>
 <p>There’s at least one public python solution. I’ve seen it. I won’t look at it again during the challenge.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -355,12 +507,17 @@ Note
 <p>If I find any other solutions, I’ll avert my eyes immediately.</p>
 </div>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://robertbryan.net/posts/FT8-launch/radio-romania.png" class="img-fluid figure-img"></p>
+<figcaption>Homemade graph of the signal to noise ratio on a frequency before, during, and after a shortwave broadcast from Romania</figcaption>
+</figure>
+</div>
 </section>
 <section id="what-does-success-look-like" class="level1">
 <h1>What does success look like?</h1>
 <p>At the outset, I’ll make a 20-minute reference recording of audio on the main JT8 frequency, 14.074 MHz, and decode that with WSJT-X.</p>
 <p>To assess my solution, I’ll decode the same audio myself and compare the results.</p>
-<!-- This is a comment in Markdown -->
 
 
 </section>
@@ -377,6 +534,7 @@ Note
   <dc:creator>Rob Bryan</dc:creator>
   <link>https://robertbryan.net/posts/dsp/</link>
   <description><![CDATA[ 
+
 
 
 

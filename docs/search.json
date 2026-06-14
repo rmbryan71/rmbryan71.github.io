@@ -4,7 +4,14 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "My intentions here:\n\nWrite specific details about what I’ve done with examples, screenshots, code, and results.\nUse plain language, and be clear about technical terms when they’re necessary.\nInclude mistakes, failures, and detours as important parts of the process.\nAim for first-class work as it’s defined by Richard Hamming in You and Your Research.\nHave fun.\n\n\nLLM Position\nWhile my use of LLMs evolves, I choose to set and maintain these boundaries out of my respect for the time and attention of human readers:\n\nI don’t use any LLM tools in writing at all.\nWhere I present content that includes LLM involvmented at any level, I will provide a clear dislaimer at the top of the page to let the reader know."
+    "text": "My intentions here:"
+  },
+  {
+    "objectID": "about.html#footnotes",
+    "href": "about.html#footnotes",
+    "title": "About",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nAs plain as possible, but not any more plain. If a practice is canonical, I’m going to use the word “canonical”.↩︎"
   },
   {
     "objectID": "posts/dsp/index.html",
@@ -14,13 +21,6 @@
     "text": "Digital signal processing (DSP) is the study of analyzing, modifying, and synthesizing signals, where signals are any observable change in a quantity over space or time.\nSignals do not have to carry information, but they can, and DSP is way more fun when they do.\nThese are my primary DSP resources:\n\nWikipedia : Digital signal processing\nWikipedia : Signal\nThink DSP by Allen Downey\nDSP First 2e from Georgia Tech\nhttps://jackschaedler.github.io/\nThe Scientist and Engineer’s Guide to Digital Signal Processing by Steven Smith\nSignal Processing with SciPy\nUnderstanding Digital Signal Processing by Richard Lyons\n\n\n\n\n\nA spectrogram of the audio signal received at 7.335 MHz on 2026-05-17"
   },
   {
-    "objectID": "posts/FT8-launch/index.html",
-    "href": "posts/FT8-launch/index.html",
-    "title": "FT8 Launch",
-    "section": "",
-    "text": "Challenge\nI’m going to try to write my own FT8 decoder in 30 days with:\n\nAn LLM tool in strict socratic mode where it will not write code or solve problems, but only ask questions.\nPosts of status at 7:00 AM (EDT) on Monday, 5:20 PM on Thursday, and 9:40 AM on Saturday.\n\nMy solution won’t rely on any part of the canonical FT8 decoder in WSJT-X.\nThere’s at least one public python solution. I’ve seen it. I won’t look at it again during the challenge.\n\n\n\n\n\n\nNote\n\n\n\nIf I find any other solutions, I’ll avert my eyes immediately.\n\n\n\n\nWhat does success look like?\nAt the outset, I’ll make a 20-minute reference recording of audio on the main JT8 frequency, 14.074 MHz, and decode that with WSJT-X.\nTo assess my solution, I’ll decode the same audio myself and compare the results."
-  },
-  {
     "objectID": "posts/FT8-1/index.html",
     "href": "posts/FT8-1/index.html",
     "title": "FT8 First Steps",
@@ -28,17 +28,45 @@
     "text": "To begin, I used a stock set of instructions1 to put my LLM tool into a mode where it would not write any code or solve any problems, but instead only ask questions to help guide me toward sorting things out myself.\n\n\n\n\n\n\nNoteObservation\n\n\n\nSocratic mode has been a perfect fit for this learning project so far.\nI’m still comfortable with my complete ban on all LLM involvement in text writing, and Socratic mode gives me the same clarity with coding."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Curious Enough",
-    "section": "",
-    "text": "FT8 First Steps\n\n\n\nFT8\n\ndsp\n\n\n\n\n\n\n\n\n\nJun 11, 2026\n\n\nRob Bryan\n\n\n\n\n\n\n\n\n\n\n\n\nFT8 Launch\n\n\n\nFT8\n\ndsp\n\n\n\n\n\n\n\n\n\nJun 8, 2026\n\n\nRob Bryan\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Signal Processing\n\n\n\ndsp\n\nmeta\n\nresources\n\n\n\n\n\n\n\n\n\nMay 18, 2026\n\n\nRob Bryan\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "posts/FT8-1/index.html#footnotes",
     "href": "posts/FT8-1/index.html#footnotes",
     "title": "FT8 First Steps",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nI didn’t write the instructions myself, so I’m not including them here.↩︎"
+  },
+  {
+    "objectID": "posts/FT8-launch/index.html",
+    "href": "posts/FT8-launch/index.html",
+    "title": "FT8 Launch",
+    "section": "",
+    "text": "Challenge\nI’m going to try to write my own FT8 decoder with:\n\nAn LLM tool in strict socratic mode where it will not write code or solve problems, but only ask questions.\nPosts of status at 7:00 AM on Monday and 8:00 PM on Friday.\n\nMy solution will be independent from the canonical FT8 decoder in WSJT-X.\nThere’s at least one public python solution. I’ve seen it. I won’t look at it again during the challenge.\n\n\n\n\n\n\nNote\n\n\n\nIf I find any other solutions, I’ll avert my eyes immediately.\n\n\n\n\n\nHomemade graph of the signal to noise ratio on a frequency before, during, and after a shortwave broadcast from Romania\n\n\n\n\nWhat does success look like?\nAt the outset, I’ll make a 20-minute reference recording of audio on the main JT8 frequency, 14.074 MHz, and decode that with WSJT-X.\nTo assess my solution, I’ll decode the same audio myself and compare the results."
+  },
+  {
+    "objectID": "posts/FT8-2/index.html",
+    "href": "posts/FT8-2/index.html",
+    "title": "FT8 Background and Plan",
+    "section": "",
+    "text": "I wrote this pipeline to clean up and sort the decoded reference signal:\nawk 'FS=\"~\" {print $2}' reference-signals.txt | sed -E 's/^[[:space:]]+//' | sort &gt; reference-signals-sorted.txt\nReading from left to right, this:\n\nuses awk to separate each line in reference-signals.txt by the tilde, then pass the second part on\nuses sed to remove the leading spaces, then pass the rest along\nuses sort to put the results in alphanumeric order and write the results to the named file\n\nThat ended the opening phase of the project where the landscape of tasks was naturally simple and linear."
+  },
+  {
+    "objectID": "posts/FT8-2/index.html#when-to-stop-reading-and-start-writing",
+    "href": "posts/FT8-2/index.html#when-to-stop-reading-and-start-writing",
+    "title": "FT8 Background and Plan",
+    "section": "When to stop reading and start writing?",
+    "text": "When to stop reading and start writing?\nMy hope is to notice and identify the impulse to code when it arrives.\n“I could start writing that immediately!” is how this sounds internally, with excitement.\n\n\n\n\n\n\n\nNoteTrap!\n\n\n\nIt’s a trap.\n\n\nI only know it’s a trap because I’ve made this mistake enough times to eventually learn.\nCurrently, my practice is to wait as long as possible before I start coding.\nWhen the pull to code is overwhelming, maybe then it’s time.\nI definitely don’t start coding without an end-to-end plan."
+  },
+  {
+    "objectID": "posts/FT8-2/index.html#footnotes",
+    "href": "posts/FT8-2/index.html#footnotes",
+    "title": "FT8 Background and Plan",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nUsed with attribution from the Wikimedia Commons.↩︎"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Curious Enough",
+    "section": "",
+    "text": "FT8 Background and Plan\n\n\n\nFT8\n\ndsp\n\n\n\n\n\n\n\n\n\nJun 15, 2026\n\n\nRob Bryan\n\n\n\n\n\n\n\n\n\n\n\n\nFT8 First Steps\n\n\n\nFT8\n\ndsp\n\n\n\n\n\n\n\n\n\nJun 12, 2026\n\n\nRob Bryan\n\n\n\n\n\n\n\n\n\n\n\n\nFT8 Launch\n\n\n\nFT8\n\ndsp\n\n\n\n\n\n\n\n\n\nJun 8, 2026\n\n\nRob Bryan\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Signal Processing\n\n\n\ndsp\n\nmeta\n\nresources\n\n\n\n\n\n\n\n\n\nMay 18, 2026\n\n\nRob Bryan\n\n\n\n\n\nNo matching items"
   }
 ]
