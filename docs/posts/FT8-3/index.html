@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Rob Bryan">
-<meta name="dcterms.date" content="2026-06-08">
+<meta name="dcterms.date" content="2026-06-19">
 
-<title>FT8 Launch – Curious Enough</title>
+<title>FT8-3 Detours Off Other Detours – Curious Enough</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -74,6 +74,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="quarto:status" content="draft">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -242,7 +243,7 @@ ul.task-list li input[type="checkbox"] {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -272,10 +273,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">FT8 Launch</h1>
+      <h1 class="title">FT8-3 Detours Off Other Detours</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">FT8</div>
                 <div class="quarto-category">dsp</div>
+                <div class="quarto-category">FT8</div>
               </div>
                   </div>
   </div>
@@ -293,7 +294,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">June 8, 2026</p>
+        <p class="date">June 19, 2026</p>
       </div>
     </div>
     
@@ -313,39 +314,51 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="challenge" class="level1">
-<h1>Challenge</h1>
-<p>I’m going to try to write my own FT8 decoder with:</p>
-<ul>
-<li>An LLM tool in strict socratic mode where it will not write code or solve problems, but only ask questions.</li>
-<li>Posts of status at 7:00 AM on Monday and Friday.</li>
-</ul>
-<p>My solution will be independent from the canonical FT8 decoder in <a href="https://wsjt.sourceforge.io/wsjtx-main_en.html">WSJT-X</a>.</p>
-<p>There’s at least one public python solution. I’ve seen it. I won’t look at it again during the challenge.</p>
+<section id="progress" class="level1">
+<h1>Progress?</h1>
+<p>Not knowing what you’re doing has a lot of “advantages”.<br>
+Predictable, linear progress isn’t one of them.</p>
+<p>If I had paid more attention to my end-to-end plan from last week, I could have saved myself a lot of time.<br>
+“… scan for Costas arrays…” is right there in the plan.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Note</span>Fact
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If I find any other solutions, I’ll avert my eyes immediately.</p>
+<p>That’s not what I did.</p>
 </div>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="radio-romania.png" class="img-fluid figure-img"></p>
-<figcaption>Homemade graph of the signal to noise ratio on a frequency before, during, and after a shortwave broadcast from Romania</figcaption>
-</figure>
+<p>First, phase 1, went relatively smoothly.<br>
+I did a <a href="https://www.mathworks.com/help/matlab/ref/fft.html">Fast Fourier Transform (FFT)</a> on the whole passband and found the signals.<br>
+</p>
+<p>Then, I went many hours down the path of trying to identify the starts of signals based on the change in total energy in the band between the quiet parts and the transmission parts.</p>
+<p>Looking back, I don’t remember deciding to do that instead of just scanning for Costas arrays, and I <strong>certainly</strong> don’t know why I stuck with it as long as I did.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Bright side
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As an experienced fiction-writer, I’m accustomed to ripping out work I loved.</p>
+</div>
 </div>
 </section>
-<section id="what-does-success-look-like" class="level1">
-<h1>What does success look like?</h1>
-<p>At the outset, I’ll make a 20-minute reference recording of audio on the main JT8 frequency, 14.074 MHz, and decode that with WSJT-X.</p>
-<p>To assess my solution, I’ll decode the same audio myself and compare the results.</p>
+<section id="new-direction" class="level1">
+<h1>New direction</h1>
+<p>Instead of trying to save time by guessing when the signal starts and decoding from there, I just decode everything and throw out what’s not signal.</p>
+<p>The people who designed FT8 obviously intended for it to work this way because they put these Costas arrays at the beginning, middle, and end of every signal for this purpose.</p>
+<p>That unlocked a new puzzle, which was that I arbitrarily set the beginning of the recording as the beginning of a 160 ms transmission window, which it isn’t, almost ever.</p>
+<p>And THAT unlocked another puzzle, which was that I need to downsample my input recording because checking the temperature outside 150,000 times a second doesn’t really give you any more information checking it once a minute.</p>
+<p>It’s time to post the update, and I’m grovelling through frequencies looking for Costas arrays.</p>
 
 
 </section>

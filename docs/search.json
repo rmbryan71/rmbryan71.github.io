@@ -21,6 +21,20 @@
     "text": "Digital signal processing (DSP) is the study of analyzing, modifying, and synthesizing signals, where signals are any observable change in a quantity over space or time.\nSignals do not have to carry information, but they can, and DSP is way more fun when they do.\nThese are my primary DSP resources:\n\nWikipedia : Digital signal processing\nWikipedia : Signal\nThink DSP by Allen Downey\nDSP First 2e from Georgia Tech\nhttps://jackschaedler.github.io/\nThe Scientist and Engineer’s Guide to Digital Signal Processing by Steven Smith\nSignal Processing with SciPy\nUnderstanding Digital Signal Processing by Richard Lyons\n\n\n\n\n\nA spectrogram of the audio signal received at 7.335 MHz on 2026-05-17"
   },
   {
+    "objectID": "posts/FT8-3/index.html",
+    "href": "posts/FT8-3/index.html",
+    "title": "FT8-3 Detours Off Other Detours",
+    "section": "",
+    "text": "Progress?\nNot knowing what you’re doing has a lot of “advantages”.\nPredictable, linear progress isn’t one of them.\nIf I had paid more attention to my end-to-end plan from last week, I could have saved myself a lot of time.\n“… scan for Costas arrays…” is right there in the plan.\n\n\n\n\n\n\nNoteFact\n\n\n\nThat’s not what I did.\n\n\nFirst, phase 1, went relatively smoothly.\nI did a Fast Fourier Transform (FFT) on the whole passband and found the signals.\n\nThen, I went many hours down the path of trying to identify the starts of signals based on the change in total energy in the band between the quiet parts and the transmission parts.\nLooking back, I don’t remember deciding to do that instead of just scanning for Costas arrays, and I certainly don’t know why I stuck with it as long as I did.\n\n\n\n\n\n\nNoteBright side\n\n\n\nAs an experienced fiction-writer, I’m accustomed to ripping out work I loved.\n\n\n\n\nNew direction\nInstead of trying to save time by guessing when the signal starts and decoding from there, I just decode everything and throw out what’s not signal.\nThe people who designed FT8 obviously intended for it to work this way because they put these Costas arrays at the beginning, middle, and end of every signal for this purpose.\nThat unlocked a new puzzle, which was that I arbitrarily set the beginning of the recording as the beginning of a 160 ms transmission window, which it isn’t, almost ever.\nAnd THAT unlocked another puzzle, which was that I need to downsample my input recording because checking the temperature outside 150,000 times a second doesn’t really give you any more information checking it once a minute.\nIt’s time to post the update, and I’m grovelling through frequencies looking for Costas arrays."
+  },
+  {
+    "objectID": "posts/FT8-launch/index.html",
+    "href": "posts/FT8-launch/index.html",
+    "title": "FT8 Launch",
+    "section": "",
+    "text": "Challenge\nI’m going to try to write my own FT8 decoder with:\n\nAn LLM tool in strict socratic mode where it will not write code or solve problems, but only ask questions.\nPosts of status at 7:00 AM on Monday and Friday.\n\nMy solution will be independent from the canonical FT8 decoder in WSJT-X.\nThere’s at least one public python solution. I’ve seen it. I won’t look at it again during the challenge.\n\n\n\n\n\n\nNote\n\n\n\nIf I find any other solutions, I’ll avert my eyes immediately.\n\n\n\n\n\nHomemade graph of the signal to noise ratio on a frequency before, during, and after a shortwave broadcast from Romania\n\n\n\n\nWhat does success look like?\nAt the outset, I’ll make a 20-minute reference recording of audio on the main JT8 frequency, 14.074 MHz, and decode that with WSJT-X.\nTo assess my solution, I’ll decode the same audio myself and compare the results."
+  },
+  {
     "objectID": "posts/FT8-1/index.html",
     "href": "posts/FT8-1/index.html",
     "title": "FT8 First Steps",
@@ -33,13 +47,6 @@
     "title": "FT8 First Steps",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nI didn’t write the instructions myself, so I’m not including them here.↩︎"
-  },
-  {
-    "objectID": "posts/FT8-launch/index.html",
-    "href": "posts/FT8-launch/index.html",
-    "title": "FT8 Launch",
-    "section": "",
-    "text": "Challenge\nI’m going to try to write my own FT8 decoder with:\n\nAn LLM tool in strict socratic mode where it will not write code or solve problems, but only ask questions.\nPosts of status at 7:00 AM on Monday and 8:00 PM on Friday.\n\nMy solution will be independent from the canonical FT8 decoder in WSJT-X.\nThere’s at least one public python solution. I’ve seen it. I won’t look at it again during the challenge.\n\n\n\n\n\n\nNote\n\n\n\nIf I find any other solutions, I’ll avert my eyes immediately.\n\n\n\n\n\nHomemade graph of the signal to noise ratio on a frequency before, during, and after a shortwave broadcast from Romania\n\n\n\n\nWhat does success look like?\nAt the outset, I’ll make a 20-minute reference recording of audio on the main JT8 frequency, 14.074 MHz, and decode that with WSJT-X.\nTo assess my solution, I’ll decode the same audio myself and compare the results."
   },
   {
     "objectID": "posts/FT8-2/index.html",
@@ -67,6 +74,6 @@
     "href": "index.html",
     "title": "Curious Enough",
     "section": "",
-    "text": "FT8 Background and Plan\n\n\n\nFT8\n\ndsp\n\n\n\n\n\n\n\n\n\nJun 15, 2026\n\n\nRob Bryan\n\n\n\n\n\n\n\n\n\n\n\n\nFT8 First Steps\n\n\n\nFT8\n\ndsp\n\n\n\n\n\n\n\n\n\nJun 12, 2026\n\n\nRob Bryan\n\n\n\n\n\n\n\n\n\n\n\n\nFT8 Launch\n\n\n\nFT8\n\ndsp\n\n\n\n\n\n\n\n\n\nJun 8, 2026\n\n\nRob Bryan\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Signal Processing\n\n\n\ndsp\n\nmeta\n\nresources\n\n\n\n\n\n\n\n\n\nMay 18, 2026\n\n\nRob Bryan\n\n\n\n\n\nNo matching items"
+    "text": "FT8-3 Detours Off Other Detours\n\n\n\ndsp\n\nFT8\n\n\n\n\n\n\n\n\n\nJun 19, 2026\n\n\nRob Bryan\n\n\n\n\n\n\n\n\n\n\n\n\nFT8 Background and Plan\n\n\n\nFT8\n\ndsp\n\n\n\n\n\n\n\n\n\nJun 15, 2026\n\n\nRob Bryan\n\n\n\n\n\n\n\n\n\n\n\n\nFT8 First Steps\n\n\n\nFT8\n\ndsp\n\n\n\n\n\n\n\n\n\nJun 12, 2026\n\n\nRob Bryan\n\n\n\n\n\n\n\n\n\n\n\n\nFT8 Launch\n\n\n\nFT8\n\ndsp\n\n\n\n\n\n\n\n\n\nJun 8, 2026\n\n\nRob Bryan\n\n\n\n\n\n\n\n\n\n\n\n\nDigital Signal Processing\n\n\n\ndsp\n\nmeta\n\nresources\n\n\n\n\n\n\n\n\n\nMay 18, 2026\n\n\nRob Bryan\n\n\n\n\n\nNo matching items"
   }
 ]

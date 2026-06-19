@@ -10,7 +10,73 @@
 <atom:link href="https://robertbryan.net/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Mon, 15 Jun 2026 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 19 Jun 2026 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>FT8-3 Detours Off Other Detours</title>
+  <dc:creator>Rob Bryan</dc:creator>
+  <link>https://robertbryan.net/posts/FT8-3/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<section id="progress" class="level1">
+<h1>Progress?</h1>
+<p>Not knowing what you’re doing has a lot of “advantages”.<br>
+Predictable, linear progress isn’t one of them.</p>
+<p>If I had paid more attention to my end-to-end plan from last week, I could have saved myself a lot of time.<br>
+“… scan for Costas arrays…” is right there in the plan.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Fact
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>That’s not what I did.</p>
+</div>
+</div>
+<p>First, phase 1, went relatively smoothly.<br>
+I did a <a href="https://www.mathworks.com/help/matlab/ref/fft.html">Fast Fourier Transform (FFT)</a> on the whole passband and found the signals.<br>
+</p>
+<p>Then, I went many hours down the path of trying to identify the starts of signals based on the change in total energy in the band between the quiet parts and the transmission parts.</p>
+<p>Looking back, I don’t remember deciding to do that instead of just scanning for Costas arrays, and I <strong>certainly</strong> don’t know why I stuck with it as long as I did.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Bright side
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As an experienced fiction-writer, I’m accustomed to ripping out work I loved.</p>
+</div>
+</div>
+</section>
+<section id="new-direction" class="level1">
+<h1>New direction</h1>
+<p>Instead of trying to save time by guessing when the signal starts and decoding from there, I just decode everything and throw out what’s not signal.</p>
+<p>The people who designed FT8 obviously intended for it to work this way because they put these Costas arrays at the beginning, middle, and end of every signal for this purpose.</p>
+<p>That unlocked a new puzzle, which was that I arbitrarily set the beginning of the recording as the beginning of a 160 ms transmission window, which it isn’t, almost ever.</p>
+<p>And THAT unlocked another puzzle, which was that I need to downsample my input recording because checking the temperature outside 150,000 times a second doesn’t really give you any more information checking it once a minute.</p>
+<p>It’s time to post the update, and I’m grovelling through frequencies looking for Costas arrays.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>dsp</category>
+  <category>FT8</category>
+  <guid>https://robertbryan.net/posts/FT8-3/</guid>
+  <pubDate>Fri, 19 Jun 2026 04:00:00 GMT</pubDate>
+</item>
 <item>
   <title>FT8 Background and Plan</title>
   <dc:creator>Rob Bryan</dc:creator>
@@ -490,7 +556,7 @@ Maybe later, I’ll decide to adjust.</p>
 <p>I’m going to try to write my own FT8 decoder with:</p>
 <ul>
 <li>An LLM tool in strict socratic mode where it will not write code or solve problems, but only ask questions.</li>
-<li>Posts of status at 7:00 AM on Monday and 8:00 PM on Friday.</li>
+<li>Posts of status at 7:00 AM on Monday and Friday.</li>
 </ul>
 <p>My solution will be independent from the canonical FT8 decoder in <a href="https://wsjt.sourceforge.io/wsjtx-main_en.html">WSJT-X</a>.</p>
 <p>There’s at least one public python solution. I’ve seen it. I won’t look at it again during the challenge.</p>
