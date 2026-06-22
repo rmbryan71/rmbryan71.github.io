@@ -10,7 +10,54 @@
 <atom:link href="https://robertbryan.net/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Fri, 19 Jun 2026 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 22 Jun 2026 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>My Process Experience</title>
+  <dc:creator>Rob Bryan</dc:creator>
+  <link>https://robertbryan.net/posts/FT8-4/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p><strong>During</strong> work, it can feel like a struggle to move in any direction while lost. Senses of orientation are weak and vague, while senses of difficulty, questioning, and pointlessness are overwhelming. Merely persisting takes significant effort. There is an unpleasantness about it.</p>
+<p>Then, on arriving at some milestone where something works that didn’t work before, my experience, and importantly, <strong>my memory</strong> of the experience, rearranges itself into, “I tinkered with this until I stumbled into a fledgling understanding.”</p>
+<p>After that, in the refinement phases, I tend to look back on the struggles as brief and needless, but that’s probably not accurate.</p>
+<section id="from-zero-to-one" class="level1">
+<h1>From zero to one</h1>
+<p>There was no evidence that I was even moving in the right direction until I identified 3 Costas arrays the proper distance apart in a data frame pulled from a recording.</p>
+<p>Then, when I did verify that, I was instantly <strong>somewhere</strong>.</p>
+<p>Not done, obviously. Not half-done or any known fraction of done, but I wasn’t at zero, and I wasn’t lost.</p>
+</section>
+<section id="the-friends-we-made-along-the-way" class="level1">
+<h1>The friends we made along the way</h1>
+<p>These highlights are my notes from each knot I struggled with enough to notice when they untangled during this phase:</p>
+<ul>
+<li><strong>Windowing bug</strong> : My FFT loop only shifted by 1 sample per iteration instead of one full 160ms window, so all FFTs were nearly identical</li>
+<li><strong>FFT symmetry</strong> : I was searching all 1920 bins including the redundant mirror half because I didn’t understand that FFT reflects the symmetry in a bandwidth.</li>
+<li><strong>Silence detection fundamentally broken</strong> : My detour into averaging energy across all 1920 bins makes a -17 dB signal in 8 bins invisible, and my refusal to abandoned that approach cost a lot more time that it could have.</li>
+<li><strong>Truncation too short</strong> : I cut my test clip off at 30 seconds, which prevented me from finding the last value of the last Costas array until I literally looked at the values with my eyes and realized there was an incomplete array there.</li>
+<li><strong><code>costas_check</code> numpy comparison bug</strong> : I learned that <code>!=</code> on a numpy array returns an element-wise array, not a boolean. Then, I learned about <code>np.array_equal</code>, which worked until I realized I didn’t need a Costas check at all.</li>
+<li><strong><code>costas_finder</code> returning <code>False</code></strong> : Instead of a check, I needed a finder, and my finder didn’t work because <code>False == 0</code> in Python, which I knew, but didn’t realize it would shadow a real match at index 0 until, again, I printed the data out in the console and looked at it with my eyes and said, out loud, “Oh, that’s False because it’s zero, not because it’s False.”</li>
+<li><strong>Band detection threshold too high</strong> : Math, right? While trying to distinguish noise from signal, <code>std</code> was inflated by a few very bright outlier bins, pushing my threshold above the actual signal. Eventually, I replaced <code>mean + N*std</code> with <code>median + N*MAD</code> (median absolute deviation), which, as a note back in time to myself in seventh grade, “Yes, you’re going to actually use this someday.”</li>
+<li><strong>Architecture redesign</strong> : When I did finally give up my flawed approach of using the silent part of the transmission cycle to orient my signal-finding, I spent a lot time trying to make small, targeted changes toward Costas array alignment. That didn’t go well. I had to abandon my approach to fixing the approach I abandoned. Deleting all of my code and starting over again from scratch worked better.</li>
+</ul>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>Later, I’d like to come back and clean up this writing, break it up with some graphics and code snippets so it’s not a wall of text, and add links to explanations of terms, but right now I think the best thing for me to do is focus on keeping momentum going toward decoding.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>FT8</category>
+  <category>dsp</category>
+  <guid>https://robertbryan.net/posts/FT8-4/</guid>
+  <pubDate>Mon, 22 Jun 2026 04:00:00 GMT</pubDate>
+</item>
 <item>
   <title>FT8-3 Detours Off Other Detours</title>
   <dc:creator>Rob Bryan</dc:creator>
