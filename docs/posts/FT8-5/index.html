@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Rob Bryan">
+<meta name="dcterms.date" content="2026-06-29">
 
-<title>Curious Enough</title>
+<title>Decoding – Curious Enough</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,27 +28,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-05ad5c04182ae40a1da91fd291b82df0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-158031087360bce0ff56dc785ce39e06.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-05ad5c04182ae40a1da91fd291b82df0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,70 +74,12 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
+<link rel="stylesheet" href="../../styles.css">
+</head>
 
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Curious Enough" href="index.xml" data-external="1"></head>
-
-<body class="nav-fixed quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed fullcontent quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -304,7 +246,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Curious Enough</span>
     </a>
   </div>
@@ -315,7 +257,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -327,257 +269,116 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block"></header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Decoding</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">dsp</div>
+                <div class="quarto-category">FT8</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Rob Bryan </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">June 29, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="ZHNw">dsp <span class="quarto-category-count">(7)</span></div><div class="category" data-category="RlQ4">FT8 <span class="quarto-category-count">(6)</span></div><div class="category" data-category="bWV0YQ==">meta <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cmVzb3VyY2Vz">resources <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
 
-
-
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ZHNwJTJDRlQ4" data-listing-date-sort="1782705600000" data-listing-file-modified-sort="1782646862570" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="519">
-<div class="thumbnail"><a href="./posts/FT8-5/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/FT8-5/index.html" class="no-external">Decoding</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZHNw'); return false;">dsp</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RlQ4'); return false;">FT8</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/FT8-5/index.html" class="no-external">
-Getting readable text <strong>can</strong> be easy.<br>
+<section id="first-decoded-string" class="level1">
+<h1>First decoded string</h1>
+<p>Getting readable text <strong>can</strong> be easy.<br>
 ASCII has done this well since 1963, but FT8 is a special case.<br>
-Each FT8 transmission window sends 77 bits of information, so if they used…
-</a></div>
+Each FT8 transmission window sends 77 bits of information, so if they used the 7-bit ASCII standard, each transmission could include up to 11 characters of text, which is not enough for two HAM radio operators with 6-character call signs to prove they have contacted each other by including both call signs in a single transmission.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div class="metadata">
-<a href="./posts/FT8-5/index.html" class="no-external">
-<div class="listing-date">
-Jun 29, 2026
-</div>
-<div class="listing-author">
-Rob Bryan
-</div>
-</a>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The principle of the thing
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="RlQ4JTJDZHNw" data-listing-date-sort="1782100800000" data-listing-file-modified-sort="1782118395036" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="612">
-<div class="thumbnail"><a href="./posts/FT8-4/index.html" class="no-external">
+<div class="callout-body-container callout-body">
+<p>Because we went through a LOT of effort to transmit, receive, and mathematically verify the accuracy of these precious 77 bits of information, it’s worth the effort to get as much value as possible out of each bit.</p>
+</div>
+</div>
+</section>
+<section id="custom-encoding" class="level1">
+<h1>Custom encoding</h1>
+<p>FT8 uses a binary-to-text system that isn’t used anywhere else in the world.<br>
+3 bits are used to define the “message type”.<br>
+One message type also has subtypes.<br>
+For each message type - subtype combination, there is a specific way the remaining bits are sliced into fields, and each field has it’s own custom binary-to-text decoding system.<br>
+There are 23 distinct fields in FT8, each of which has a different way to convert binary bits to text.</p>
+</section>
+<section id="time-sink" class="level1">
+<h1>Time sink</h1>
+<p>I expected the 3 bits that define the message type to be at the start of the stream of 77 bits.<br>
+<a href="https://wsjt.sourceforge.io/FT4_FT8_QEX.pdf">The paper</a> is not specific about this.<br>
+As it turns out, they’re at the end.<br>
+That took me a long time to figure out.<br>
+I didn’t measure, so I don’t know exactly how much, but my guess is it was 6 to 8 hours of work time.</p>
+</section>
+<section id="manual-decoding" class="level1">
+<h1>Manual decoding</h1>
+<p>After establishing the message type and subtype, I manually sliced the stream of bits and manually decoded one segment of those bits into a callsign that matched a callsign in the decoded reference.<br>
+</p>
+<p>That proved, for the first time, that my solution could work end-to-end.<br>
+That was Friday morning, June 26, 2026.</p>
+</section>
+<section id="automatic-decoding" class="level1">
+<h1>Automatic decoding</h1>
+<p>I spent the weekend automating the decoding and putting a few measures in place to track my progress.<br>
+</p>
+<p>In the 20-minute reference recording, there are 113 messages.<br>
+I correctly decode 8 of them. (7%)<br>
+I get partial, incorrect decodes on another 17 messages. (15%)<br>
+The rest (78%), I miss entirely.</p>
+<p>Also, my code takes 7 minutes and 2 seconds (422 seconds) to process 20 minutes of audio.<br>
+That’s too slow by a factor of 2.<br>
+Since each 15-second transmission window includes 2.4 seconds of silence to allow for decoding, a 20-minute recording has 80 windows, and at 2.4 seconds each, that’s 192 seconds of processing time.</p>
+</section>
+<section id="ai" class="level1">
+<h1>AI</h1>
+<p>Socratic mode is working well for me.<br>
+It hasn’t solved a single problem during this project, which is exactly what I wanted.<br>
+It hasn’t generated a single fragment of code at all, not one symbol.<br>
+When it reviews my code, it responds with questions, like: - “How many times does the inner loop run?” - “What different methods have you tried for finding the intersection of these sets?” - “How does Python ‘join’ convert lists to strings?”</p>
+<p>I’m not even mad that it let me struggle all day with my incorrect assumption that the message type identifier was at the beginning of the bit stream before it finally asked, “Is the FT8 specific about where the message type identifier is?”</p>
 
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
 
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/FT8-4/index.html" class="no-external">My Process Experience</a>
-</h3>
-<div class="listing-categories">
+</section>
 
-<div class="listing-category" onclick="window.quartoListingCategory('RlQ4'); return false;">FT8</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZHNw'); return false;">dsp</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/FT8-4/index.html" class="no-external">
-<strong>During</strong> work, it can feel like a struggle to move in any direction while lost. Senses of orientation are weak and vague, while senses of difficulty, questioning, and…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/FT8-4/index.html" class="no-external">
-<div class="listing-date">
-Jun 22, 2026
-</div>
-<div class="listing-author">
-Rob Bryan
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="ZHNwJTJDRlQ4" data-listing-date-sort="1781841600000" data-listing-file-modified-sort="1781865458495" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="284">
-<div class="thumbnail"><a href="./posts/FT8-3/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/FT8-3/index.html" class="no-external">FT8-3 Detours Off Other Detours</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZHNw'); return false;">dsp</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RlQ4'); return false;">FT8</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/FT8-3/index.html" class="no-external">
-Not knowing what you’re doing has a lot of “advantages”.<br>
-Predictable, linear progress isn’t one of them.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/FT8-3/index.html" class="no-external">
-<div class="listing-date">
-Jun 19, 2026
-</div>
-<div class="listing-author">
-Rob Bryan
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="RlQ4JTJDZHNw" data-listing-date-sort="1781496000000" data-listing-file-modified-sort="1781455785557" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="672">
-<div class="thumbnail"><a href="./posts/FT8-2/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/FT8-2/Fessenden_500_CPS_Transmitter.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/FT8-2/index.html" class="no-external">FT8 Background and Plan</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RlQ4'); return false;">FT8</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZHNw'); return false;">dsp</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/FT8-2/index.html" class="no-external">
-I wrote this pipeline to clean up and sort the decoded reference signal:
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/FT8-2/index.html" class="no-external">
-<div class="listing-date">
-Jun 15, 2026
-</div>
-<div class="listing-author">
-Rob Bryan
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="RlQ4JTJDZHNw" data-listing-date-sort="1781236800000" data-listing-file-modified-sort="1781456130220" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1168">
-<div class="thumbnail"><a href="./posts/FT8-1/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/FT8-1/waveform.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/FT8-1/index.html" class="no-external">FT8 First Steps</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RlQ4'); return false;">FT8</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZHNw'); return false;">dsp</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/FT8-1/index.html" class="no-external">
-To begin, I used a stock set of instructions<sup>1</sup> to put my LLM tool into a mode where it would not write any code or solve any problems, but instead only ask questions to help…
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/FT8-1/index.html" class="no-external">
-<div class="listing-date">
-Jun 12, 2026
-</div>
-<div class="listing-author">
-Rob Bryan
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="RlQ4JTJDZHNw" data-listing-date-sort="1780891200000" data-listing-file-modified-sort="1781864551097" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="140">
-<div class="thumbnail"><a href="./posts/FT8-launch/index.html" class="no-external">
-
-<img loading="lazy" src="./posts/FT8-launch/radio-romania.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/FT8-launch/index.html" class="no-external">FT8 Launch</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RlQ4'); return false;">FT8</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZHNw'); return false;">dsp</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/FT8-launch/index.html" class="no-external">
-I’m going to try to write my own FT8 decoder with:
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/FT8-launch/index.html" class="no-external">
-<div class="listing-date">
-Jun 8, 2026
-</div>
-<div class="listing-author">
-Rob Bryan
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="ZHNwJTJDbWV0YSUyQ3Jlc291cmNlcw==" data-listing-date-sort="1779076800000" data-listing-file-modified-sort="1779548739967" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="103">
-<div class="thumbnail"><a href="./posts/dsp/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="posts/dsp/signal-spectrogram.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/dsp/index.html" class="no-external">Digital Signal Processing</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZHNw'); return false;">dsp</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('bWV0YQ=='); return false;">meta</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cmVzb3VyY2Vz'); return false;">resources</div>
-
-</div>
-<div class="delink listing-description"><a href="./posts/dsp/index.html" class="no-external">
-Digital signal processing (DSP) is the study of analyzing, modifying, and synthesizing signals, where signals are <em>any</em> observable change in a quantity over space or time.
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/dsp/index.html" class="no-external">
-<div class="listing-date">
-May 18, 2026
-</div>
-<div class="listing-author">
-Rob Bryan
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right

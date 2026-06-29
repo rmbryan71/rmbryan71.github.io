@@ -10,7 +10,89 @@
 <atom:link href="https://robertbryan.net/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.9.37</generator>
-<lastBuildDate>Mon, 22 Jun 2026 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 29 Jun 2026 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Decoding</title>
+  <dc:creator>Rob Bryan</dc:creator>
+  <link>https://robertbryan.net/posts/FT8-5/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<section id="first-decoded-string" class="level1">
+<h1>First decoded string</h1>
+<p>Getting readable text <strong>can</strong> be easy.<br>
+ASCII has done this well since 1963, but FT8 is a special case.<br>
+Each FT8 transmission window sends 77 bits of information, so if they used the 7-bit ASCII standard, each transmission could include up to 11 characters of text, which is not enough for two HAM radio operators with 6-character call signs to prove they have contacted each other by including both call signs in a single transmission.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>The principle of the thing
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Because we went through a LOT of effort to transmit, receive, and mathematically verify the accuracy of these precious 77 bits of information, it’s worth the effort to get as much value as possible out of each bit.</p>
+</div>
+</div>
+</section>
+<section id="custom-encoding" class="level1">
+<h1>Custom encoding</h1>
+<p>FT8 uses a binary-to-text system that isn’t used anywhere else in the world.<br>
+3 bits are used to define the “message type”.<br>
+One message type also has subtypes.<br>
+For each message type - subtype combination, there is a specific way the remaining bits are sliced into fields, and each field has it’s own custom binary-to-text decoding system.<br>
+There are 23 distinct fields in FT8, each of which has a different way to convert binary bits to text.</p>
+</section>
+<section id="time-sink" class="level1">
+<h1>Time sink</h1>
+<p>I expected the 3 bits that define the message type to be at the start of the stream of 77 bits.<br>
+<a href="https://wsjt.sourceforge.io/FT4_FT8_QEX.pdf">The paper</a> is not specific about this.<br>
+As it turns out, they’re at the end.<br>
+That took me a long time to figure out.<br>
+I didn’t measure, so I don’t know exactly how much, but my guess is it was 6 to 8 hours of work time.</p>
+</section>
+<section id="manual-decoding" class="level1">
+<h1>Manual decoding</h1>
+<p>After establishing the message type and subtype, I manually sliced the stream of bits and manually decoded one segment of those bits into a callsign that matched a callsign in the decoded reference.<br>
+</p>
+<p>That proved, for the first time, that my solution could work end-to-end.<br>
+That was Friday morning, June 26, 2026.</p>
+</section>
+<section id="automatic-decoding" class="level1">
+<h1>Automatic decoding</h1>
+<p>I spent the weekend automating the decoding and putting a few measures in place to track my progress.<br>
+</p>
+<p>In the 20-minute reference recording, there are 113 messages.<br>
+I correctly decode 8 of them. (7%)<br>
+I get partial, incorrect decodes on another 17 messages. (15%)<br>
+The rest (78%), I miss entirely.</p>
+<p>Also, my code takes 7 minutes and 2 seconds (422 seconds) to process 20 minutes of audio.<br>
+That’s too slow by a factor of 2.<br>
+Since each 15-second transmission window includes 2.4 seconds of silence to allow for decoding, a 20-minute recording has 80 windows, and at 2.4 seconds each, that’s 192 seconds of processing time.</p>
+</section>
+<section id="ai" class="level1">
+<h1>AI</h1>
+<p>Socratic mode is working well for me.<br>
+It hasn’t solved a single problem during this project, which is exactly what I wanted.<br>
+It hasn’t generated a single fragment of code at all, not one symbol.<br>
+When it reviews my code, it responds with questions, like: - “How many times does the inner loop run?” - “What different methods have you tried for finding the intersection of these sets?” - “How does Python ‘join’ convert lists to strings?”</p>
+<p>I’m not even mad that it let me struggle all day with my incorrect assumption that the message type identifier was at the beginning of the bit stream before it finally asked, “Is the FT8 specific about where the message type identifier is?”</p>
+
+
+</section>
+
+ ]]></description>
+  <category>dsp</category>
+  <category>FT8</category>
+  <guid>https://robertbryan.net/posts/FT8-5/</guid>
+  <pubDate>Mon, 29 Jun 2026 04:00:00 GMT</pubDate>
+</item>
 <item>
   <title>My Process Experience</title>
   <dc:creator>Rob Bryan</dc:creator>
